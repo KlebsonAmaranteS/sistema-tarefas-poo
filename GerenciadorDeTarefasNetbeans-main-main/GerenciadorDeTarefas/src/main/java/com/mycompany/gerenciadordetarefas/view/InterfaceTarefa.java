@@ -1,13 +1,13 @@
 package main.java.com.mycompany.gerenciadordetarefas.view;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import main.java.com.mycompany.gerenciadordetarefas.controller.DataInvalidaException;
+import main.java.com.mycompany.gerenciadordetarefas.controller.DataValidator;
 import main.java.com.mycompany.gerenciadordetarefas.controller.TarefaController;
-import main.java.com.mycompany.gerenciadordetarefas.exceptions.DataInvalidaException;
+import main.java.com.mycompany.gerenciadordetarefas.controller.TarefaRepository;
 import main.java.com.mycompany.gerenciadordetarefas.model.Tarefa;
+import main.java.com.mycompany.gerenciadordetarefas.model.TarefaService;
 
 import javax.swing.*;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -17,9 +17,16 @@ import static main.java.com.mycompany.gerenciadordetarefas.view.TelaLogin.usuari
 
 public class InterfaceTarefa extends javax.swing.JFrame {
 
-    private List<Tarefa> tarefas;
-    public InterfaceTarefa() {
+    private final JList<Tarefa> list;
+    TelaPrincipal telaPrincipal = new TelaPrincipal();
+    private final TarefaController tarefaController;
 
+    private List<Tarefa> tarefas;
+    TarefaRepository tarefaPersistence = new TarefaRepository();
+    TarefaService tarefaService = new TarefaService(tarefaPersistence);
+    public InterfaceTarefa(TarefaController tarefaController) {
+        this.tarefaController = tarefaController;
+        this.list = new JList<>();
         tarefas = new ArrayList<>();
         initComponents();
         buttonGroup1.add(jRadioButtonNaoConcluida);
@@ -156,7 +163,7 @@ public class InterfaceTarefa extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-            this.dispose();
+        this.dispose();
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,36 +171,34 @@ public class InterfaceTarefa extends javax.swing.JFrame {
             cadastrarTarefa(usuarioLogado);
             salvarTarefasEmJSON(usuarioLogado);
             this.dispose();
-        } catch (ParseException e) {
+        } catch (ParseException | DataInvalidaException | IOException e) {
             JOptionPane.showMessageDialog(this, "Formato de data inválido. Por favor, insira uma data válida.", "Erro", JOptionPane.ERROR_MESSAGE);
-        } catch (DataInvalidaException e) {
-            JOptionPane.showMessageDialog(this, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
-        TelaPrincipal telaPrincipal = new TelaPrincipal();
-        telaPrincipal.atualizarListaTarefas(tarefas);
     }
 
-    public void cadastrarTarefa(String usuario) throws ParseException, DataInvalidaException {
-        TarefaController tarefaController = new TarefaController();
+    public void cadastrarTarefa(String usuario) throws ParseException, DataInvalidaException, IOException {
         Tarefa novaTarefa = new Tarefa(
                 usuario,
                 jTextFieldTitulo.getText(),
                 jTextArea1.getText(),
-                tarefaController.validarData(jFormattedTextFieldData.getText()),
+                DataValidator.validarData(jFormattedTextFieldData.getText()),
                 jRadioButtonConcluida.isSelected(),
                 obterImportanciaSelecionada()
         );
 
-        tarefas.add(novaTarefa);
+        tarefaController.cadastrarTarefa(novaTarefa);
 
         JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-        TelaPrincipal telaPrincipal = new TelaPrincipal();
-        telaPrincipal.atualizarListaTarefas(tarefas);
     }
-    private void salvarTarefasEmJSON(String usuario) {
-        TarefaController tarefaController = new TarefaController();
-        List<Tarefa> tarefasExistente = tarefaController.carregarTarefasDoJSON();
 
+    private void salvarTarefasEmJSON(String usuario) throws IOException {
+
+        TarefaController tarefaController = new TarefaController();
+
+        // Carregar as tarefas existentes do arquivo JSON
+        List<Tarefa> tarefasExistente = TarefaRepository.carregarTarefas(usuario);
+
+        // Criar a nova tarefa com os dados informados na interface
         Tarefa novaTarefa = new Tarefa(
                 usuario,
                 jTextFieldTitulo.getText(),
@@ -203,17 +208,20 @@ public class InterfaceTarefa extends javax.swing.JFrame {
                 obterImportanciaSelecionada()
         );
 
+        // Adicionar a nova tarefa à lista existente
         tarefasExistente.add(novaTarefa);
 
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String json = gson.toJson(tarefasExistente);
+        // Salvar a lista atualizada no arquivo JSON
+        tarefaPersistence.salvarTarefas(tarefasExistente);
 
-        try (FileWriter writer = new FileWriter("tarefas.json")) {
-            writer.write(json);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        // Atualizar a lista de tarefas na interface (se necessário)
+        TelaPrincipal telaPrincipal = new TelaPrincipal();
+        telaPrincipal.atualizarListaTarefas(tarefasExistente);
+
+        // Exibir mensagem de sucesso
+        JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
     }
+
     public String obterImportanciaSelecionada() {
         if (jRadioButtonBaixa.isSelected()) {
             return "Baixa";

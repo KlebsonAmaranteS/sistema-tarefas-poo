@@ -5,13 +5,10 @@ import java.util.Objects;
 public class Tarefa {
     private String usuario;
     private String descricao;
-
     private String titulo;
-
     private String dataConclusao;
     private boolean concluida;
     private String importancia;
-
 
     public Tarefa(String usuario, String titulo, String descricao, String dataConclusao, boolean concluida, String importancia) {
         this.usuario = usuario;
@@ -31,10 +28,6 @@ public class Tarefa {
 
     public String getUsuario() {
         return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
     }
 
     public String getTitulo() {

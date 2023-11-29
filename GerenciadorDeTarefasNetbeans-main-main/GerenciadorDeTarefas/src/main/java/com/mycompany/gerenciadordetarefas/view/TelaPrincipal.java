@@ -1,18 +1,19 @@
 package main.java.com.mycompany.gerenciadordetarefas.view;
 
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
 
 import main.java.com.mycompany.gerenciadordetarefas.controller.TarefaController;
-import main.java.com.mycompany.gerenciadordetarefas.model.GerenciadorTarefas;
+import main.java.com.mycompany.gerenciadordetarefas.controller.TarefaRepository;
 import main.java.com.mycompany.gerenciadordetarefas.model.Tarefa;
 
 import static main.java.com.mycompany.gerenciadordetarefas.view.TelaLogin.usuarioLogado;
 
 public class TelaPrincipal extends javax.swing.JFrame {
-
+    TarefaRepository tarefaPersistence = new TarefaRepository();
     TarefaController tarefaController = new TarefaController();
     private List<Tarefa> tarefas;
     private final JFrame frame;
@@ -72,20 +73,32 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButtonEditarTarefa.setText("Editar Tarefa");
         jButtonEditarTarefa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEditarTarefaActionPerformed(evt);
+                try {
+                    jButtonEditarTarefaActionPerformed(evt);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
         jButtonRemoverTarefa.setText("Remover Tarefa");
         jButtonRemoverTarefa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRemoverTarefaActionPerformed(evt);
+                try {
+                    jButtonRemoverTarefaActionPerformed(evt);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
         jTextFieldBuscarTarefa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldBuscarTarefaActionPerformed(evt);
+                try {
+                    jTextFieldBuscarTarefaActionPerformed(evt);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
@@ -96,7 +109,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButtonRemoverTarefa1.setText("Listar Tarefas");
         jButtonRemoverTarefa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonListarTarefa1ActionPerformed(evt);
+                try {
+                    jButtonListarTarefa1ActionPerformed(evt);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
@@ -156,7 +173,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
 
-    private void jButtonEditarTarefaActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButtonEditarTarefaActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
         int selectedIndex = jList1.getSelectedIndex();
 
         if (selectedIndex != -1) {
@@ -165,7 +182,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             TelaEdicaoTarefa telaEdicao = new TelaEdicaoTarefa(this, true, tarefaSelecionada);
             telaEdicao.setVisible(true);
 
-            atualizarListaTarefas(GerenciadorTarefas.carregarTarefas(usuarioLogado));
+            atualizarListaTarefas(TarefaRepository.carregarTarefas(usuarioLogado));
         } else {
             System.out.println("Nenhuma tarefa selecionada para editar.");
         }
@@ -187,7 +204,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
 
-    private void jButtonRemoverTarefaActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButtonRemoverTarefaActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
         int selectedIndex = jList1.getSelectedIndex();
 
         if (selectedIndex != -1) {
@@ -200,9 +217,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
                     DefaultListModel<Tarefa> defaultListModel = (DefaultListModel<Tarefa>) model;
 
                     defaultListModel.remove(selectedIndex);
-
-                    GerenciadorTarefas gerenciadorTarefas = new GerenciadorTarefas();
                     tarefaController.removerTarefa(usuarioLogado, selectedTask.getTitulo());
+                    atualizarListaTarefas(tarefas);
                 } else {
                     JOptionPane.showMessageDialog(frame, "Não foi possível remover a tarefa");
                 }
@@ -210,13 +226,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         }
     }
 
-
-
-    private void jTextFieldBuscarTarefaActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jTextFieldBuscarTarefaActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
         String termoBusca = jTextFieldBuscarTarefa.getText();
 
         if (termoBusca != null && !termoBusca.isEmpty()) {
-            List<Tarefa> tarefas = GerenciadorTarefas.carregarTarefas(usuarioLogado);
+            List<Tarefa> tarefas = TarefaRepository.carregarTarefas(usuarioLogado);
 
             if (tarefas != null) {
                 DefaultListModel<Tarefa> model = new DefaultListModel<>();
@@ -235,12 +249,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
 
     private void jButtonCriarTarefaActionPerformed(java.awt.event.ActionEvent evt) {
-        InterfaceTarefa telaCadastro = new InterfaceTarefa();
+        InterfaceTarefa telaCadastro = new InterfaceTarefa(tarefaController);
         telaCadastro.setVisible(true);
     }
 
-    private void jButtonListarTarefa1ActionPerformed(java.awt.event.ActionEvent evt) {
-        List<Tarefa> tarefas = GerenciadorTarefas.carregarTarefas(usuarioLogado);
+    private void jButtonListarTarefa1ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
+        List<Tarefa> tarefas = TarefaRepository.carregarTarefas(usuarioLogado);
 
         if (tarefas != null) {
             DefaultListModel<Tarefa> model = new DefaultListModel<>();

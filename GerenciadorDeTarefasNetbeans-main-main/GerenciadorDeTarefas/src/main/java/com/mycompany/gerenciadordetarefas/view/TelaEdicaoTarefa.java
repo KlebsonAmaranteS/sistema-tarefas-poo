@@ -4,10 +4,13 @@
  */
 package main.java.com.mycompany.gerenciadordetarefas.view;
 
-import main.java.com.mycompany.gerenciadordetarefas.model.GerenciadorTarefas;
+import main.java.com.mycompany.gerenciadordetarefas.controller.TarefaController;
+import main.java.com.mycompany.gerenciadordetarefas.controller.TarefaRepository;
 import main.java.com.mycompany.gerenciadordetarefas.model.Tarefa;
+import main.java.com.mycompany.gerenciadordetarefas.model.TarefaService;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,7 +19,7 @@ import static main.java.com.mycompany.gerenciadordetarefas.view.TelaLogin.usuari
 public class TelaEdicaoTarefa extends javax.swing.JFrame {
     private final TelaPrincipal telaPrincipal;
     private final Tarefa tarefaParaEditar;
-    GerenciadorTarefas gerenciadorTarefas = new GerenciadorTarefas();
+    TarefaRepository tarefaPersistence = new TarefaRepository();
 
     public TelaEdicaoTarefa(TelaPrincipal telaPrincipal, boolean modal, Tarefa tarefaParaEditar) {
 
@@ -115,7 +118,11 @@ public class TelaEdicaoTarefa extends javax.swing.JFrame {
         jButton2.setText("Concluir");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                try {
+                    jButton2ActionPerformed(evt);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
         getContentPane().add(jButton2);
@@ -172,7 +179,7 @@ public class TelaEdicaoTarefa extends javax.swing.JFrame {
         // TODO add your handling code here:
     }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
         Tarefa tarefaEditada = new Tarefa(usuarioLogado, "Poo", "Java", "21/12/2023", true, "alta");
         tarefaEditada.setTitulo(jTextFieldTitulo.getText());
         tarefaEditada.setDescricao(jTextArea1.getText());
@@ -195,21 +202,20 @@ public class TelaEdicaoTarefa extends javax.swing.JFrame {
         if (editarTarefa(tarefaParaEditar, tarefaEditada)) {
             JOptionPane.showMessageDialog(this, "Tarefa editada com sucesso!");
             dispose();
-            telaPrincipal.atualizarListaTarefas(Objects.requireNonNull(GerenciadorTarefas.carregarTarefas(usuarioLogado)));
+            telaPrincipal.atualizarListaTarefas(Objects.requireNonNull(TarefaRepository.carregarTarefas(usuarioLogado)));
         } else {
             JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.");
         }
     }
 
-    private boolean editarTarefa(Tarefa tarefaOriginal, Tarefa tarefaEditada) {
-        List<Tarefa> tarefas = GerenciadorTarefas.carregarTarefas(usuarioLogado);
+    private boolean editarTarefa(Tarefa tarefaOriginal, Tarefa tarefaEditada) throws IOException {
+        List<Tarefa> tarefas = TarefaRepository.carregarTarefas(usuarioLogado);
 
         int indice = tarefas.indexOf(tarefaOriginal);
 
         if (indice != -1) {
             tarefas.set(indice, tarefaEditada);
-
-            gerenciadorTarefas.salvarTarefas(tarefas);
+            tarefaPersistence.salvarTarefas(tarefas);
 
             return true;
         }
@@ -236,5 +242,4 @@ public class TelaEdicaoTarefa extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextFieldTitulo;
-    // End of variables declaration//GEN-END:variables
 }
