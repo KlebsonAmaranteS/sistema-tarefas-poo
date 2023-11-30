@@ -176,20 +176,80 @@ public class InterfaceTarefa extends javax.swing.JFrame {
         }
     }
 
+//    public void cadastrarTarefa(String usuario) throws ParseException, DataInvalidaException, IOException {
+//        Tarefa novaTarefa = new Tarefa(
+//                usuario,
+//                jTextFieldTitulo.getText(),
+//                jTextArea1.getText(),
+//                DataValidator.validarData(jFormattedTextFieldData.getText()),
+//                jRadioButtonConcluida.isSelected(),
+//                obterImportanciaSelecionada()
+//        );
+//
+//        tarefaController.cadastrarTarefa(novaTarefa);
+//
+//        JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+//    }
+
     public void cadastrarTarefa(String usuario) throws ParseException, DataInvalidaException, IOException {
-        Tarefa novaTarefa = new Tarefa(
-                usuario,
-                jTextFieldTitulo.getText(),
-                jTextArea1.getText(),
-                DataValidator.validarData(jFormattedTextFieldData.getText()),
-                jRadioButtonConcluida.isSelected(),
-                obterImportanciaSelecionada()
-        );
+        String titulo = jTextFieldTitulo.getText();
+        String descricao = jTextArea1.getText();
+        String dataConclusao = jFormattedTextFieldData.getText();
 
-        tarefaController.cadastrarTarefa(novaTarefa);
+        // Verificar se o título foi fornecido
+        if (titulo.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, forneça um título para a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
 
-        JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-    }
+        // Verificar se a descrição foi fornecida
+        if (descricao.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, forneça uma descrição para a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Verificar se a data de conclusão foi fornecida e é válida
+        if (dataConclusao.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, forneça uma data de conclusão para a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        try {
+            DataValidator.validarData(dataConclusao);
+        } catch (DataInvalidaException e) {
+            JOptionPane.showMessageDialog(this, "Formato de data inválido. Por favor, insira uma data válida.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Verificar se pelo menos uma opção de status foi marcada
+        if (!jRadioButtonConcluida.isSelected() && !jRadioButtonNaoConcluida.isSelected()) {
+            JOptionPane.showMessageDialog(this, "Por favor, selecione o status da tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Verificar se pelo menos uma opção de importância foi marcada
+        if (!jRadioButtonBaixa.isSelected() && !jRadioButtonMedia.isSelected() && !jRadioButtonAlta.isSelected()) {
+            JOptionPane.showMessageDialog(this, "Por favor, selecione a importância da tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        else {
+            // Restante do código para criar a nova tarefa
+            Tarefa novaTarefa = new Tarefa(
+                    usuario,
+                    titulo,
+                    descricao,
+                    DataValidator.validarData(dataConclusao),
+                    jRadioButtonConcluida.isSelected(),
+                    obterImportanciaSelecionada()
+            );
+
+            tarefaController.cadastrarTarefa(novaTarefa);
+
+            JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+        }}
+
+
 
     private void salvarTarefasEmJSON(String usuario) throws IOException {
 
@@ -218,8 +278,6 @@ public class InterfaceTarefa extends javax.swing.JFrame {
         TelaPrincipal telaPrincipal = new TelaPrincipal();
         telaPrincipal.atualizarListaTarefas(tarefasExistente);
 
-        // Exibir mensagem de sucesso
-        JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public String obterImportanciaSelecionada() {
