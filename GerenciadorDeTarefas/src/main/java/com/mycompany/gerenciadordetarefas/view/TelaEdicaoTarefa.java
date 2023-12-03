@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.mycompany.gerenciadordetarefas.view;
 
 import com.mycompany.gerenciadordetarefas.controller.TarefaRepository;
@@ -183,6 +179,11 @@ public class TelaEdicaoTarefa extends javax.swing.JFrame {
         tarefaEditada.setDescricao(jTextArea1.getText());
         tarefaEditada.setDataConclusao(jFormattedTextFieldData.getText());
 
+        if (!isOpcaoSelecionada()) {
+            JOptionPane.showMessageDialog(this, "Por favor, selecione uma opção para Status e Importância.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
         if (jRadioButtonConcluida.isSelected()) {
             tarefaEditada.setStatus(true);
         } else {
@@ -202,8 +203,13 @@ public class TelaEdicaoTarefa extends javax.swing.JFrame {
             dispose();
             telaPrincipal.atualizarListaTarefas(Objects.requireNonNull(TarefaRepository.carregarTarefas(usuarioLogado)));
         } else {
-            JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.");
+            JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
         }
+    }
+
+    private boolean isOpcaoSelecionada() {
+        return (jRadioButtonNaoConcluida.isSelected() || jRadioButtonConcluida.isSelected()) &&
+                (jRadioButtonBaixa.isSelected() || jRadioButtonMedia.isSelected() || jRadioButtonAlta.isSelected());
     }
 
     private boolean editarTarefa(Tarefa tarefaOriginal, Tarefa tarefaEditada) throws IOException {
