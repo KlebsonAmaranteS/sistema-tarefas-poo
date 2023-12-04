@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class TarefaRepository {
     private static final String CAMINHO_ARQUIVO_JSON = "tarefas.json";
@@ -24,8 +23,7 @@ public class TarefaRepository {
             }
 
             return todasAsTarefas.stream()
-                    .filter(tarefa -> tarefa.getUsuario().equals(usuario))
-                    .collect(Collectors.toList());
+                    .filter(tarefa -> tarefa.getUsuario().equals(usuario)).toList();
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -17,7 +17,6 @@ import static com.mycompany.gerenciadordetarefas.view.TelaLogin.usuarioLogado;
 
 public class InterfaceTarefa extends javax.swing.JFrame {
 
-    private final JList<Tarefa> list;
     private final TarefaRepository tarefaPersistence;
     private final TarefaController tarefaController;
     private final TelaPrincipal telaPrincipal;
@@ -30,8 +29,7 @@ public class InterfaceTarefa extends javax.swing.JFrame {
         this.tarefaPersistence = tarefaPersistence;
         this.tarefaService = tarefaService;
         this.telaPrincipal = new TelaPrincipal(tarefaController, tarefaPersistence, tarefaService);
-        this.list = new JList<>();
-        tarefas = new ArrayList<>();
+        this.tarefas = new ArrayList<>();
         initComponents();
         buttonGroup1.add(jRadioButtonNaoConcluida);
         buttonGroup1.add(jRadioButtonConcluida);
@@ -178,20 +176,6 @@ public class InterfaceTarefa extends javax.swing.JFrame {
         }
     }
 
-//    public void cadastrarTarefa(String usuario) throws ParseException, main.java.com.mycompany.gerenciadordetarefas.controller.DataInvalidaException, IOException {
-//        Tarefa novaTarefa = new Tarefa(
-//                usuario,
-//                jTextFieldTitulo.getText(),
-//                jTextArea1.getText(),
-//                DataValidator.validarData(jFormattedTextFieldData.getText()),
-//                jRadioButtonConcluida.isSelected(),
-//                obterImportanciaSelecionada()
-//        );
-//
-//        tarefaController.cadastrarTarefa(novaTarefa);
-//
-//        JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-//    }
 
     public void cadastrarTarefa(String usuario) throws ParseException, DataInvalidaException, IOException {
         String titulo = jTextFieldTitulo.getText();

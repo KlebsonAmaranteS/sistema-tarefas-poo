@@ -7,8 +7,6 @@ import com.mycompany.gerenciadordetarefas.model.TarefaService;
 import java.util.List;
 
 public class TarefaController {
-    //    TarefaRepository tarefaRepository = new TarefaRepository();
-//    TarefaService tarefaService = new TarefaService(tarefaRepository);
     private final TarefaRepository tarefaRepository;
     private final TarefaService tarefaService;
 

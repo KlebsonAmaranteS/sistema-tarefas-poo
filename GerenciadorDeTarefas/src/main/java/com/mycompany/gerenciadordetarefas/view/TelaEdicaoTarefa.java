@@ -167,39 +167,6 @@ public class TelaEdicaoTarefa extends javax.swing.JFrame {
         // TODO add your handling code here:
     }
 
-//    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
-//        Tarefa tarefaEditada = new Tarefa(usuarioLogado, "Poo", "Java", "21/12/2023", true, "alta");
-//        tarefaEditada.setTitulo(jTextFieldTitulo.getText());
-//        tarefaEditada.setDescricao(jTextArea1.getText());
-//        tarefaEditada.setDataConclusao(jFormattedTextFieldData.getText());
-//
-//        if (!isOpcaoSelecionada()) {
-//            JOptionPane.showMessageDialog(this, "Por favor, selecione uma opção para Status e Importância.", "Erro", JOptionPane.ERROR_MESSAGE);
-//            return;
-//        }
-//
-//        if (jRadioButtonConcluida.isSelected()) {
-//            tarefaEditada.setStatus(true);
-//        } else {
-//            tarefaEditada.setStatus(false);
-//        }
-//
-//        if (jRadioButtonBaixa.isSelected()) {
-//            tarefaEditada.setImportancia("Baixa");
-//        } else if (jRadioButtonMedia.isSelected()) {
-//            tarefaEditada.setImportancia("Média");
-//        } else {
-//            tarefaEditada.setImportancia("Alta");
-//        }
-//
-//        if (editarTarefa(tarefaParaEditar, tarefaEditada)) {
-//            JOptionPane.showMessageDialog(this, "Tarefa editada com sucesso!");
-//            dispose();
-//            telaPrincipal.atualizarListaTarefas(Objects.requireNonNull(TarefaRepository.carregarTarefas(usuarioLogado)));
-//        } else {
-//            JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
-//        }
-//    }
 private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
     Tarefa tarefaEditada = new Tarefa(usuarioLogado, "Poo", "Java", "21/12/2023", true, "alta");
     tarefaEditada.setTitulo(jTextFieldTitulo.getText());
@@ -212,9 +179,9 @@ private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
     }
 
     if (jRadioButtonConcluida.isSelected()) {
-        tarefaEditada.setStatus(true);
+        tarefaEditada.setStatus();
     } else {
-        tarefaEditada.setStatus(false);
+        tarefaEditada.setStatus();
     }
 
     if (jRadioButtonBaixa.isSelected()) {

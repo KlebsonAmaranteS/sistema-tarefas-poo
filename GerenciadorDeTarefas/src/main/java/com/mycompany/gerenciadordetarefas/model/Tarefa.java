@@ -63,7 +63,7 @@ public class Tarefa {
         this.dataConclusao = dataConclusao;
     }
 
-    public boolean setStatus(boolean concluída) {
+    public boolean setStatus() {
         return concluida;
     }
     @Override

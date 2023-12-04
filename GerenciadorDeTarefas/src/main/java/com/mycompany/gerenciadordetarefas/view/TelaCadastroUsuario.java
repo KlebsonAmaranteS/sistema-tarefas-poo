@@ -137,7 +137,9 @@ private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
 }
 
     private void jTextFieldCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {
+        throw new UnsupportedOperationException("Ação não implementada.");
     }
+
 
 
     private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {
