@@ -5,22 +5,30 @@ import com.mycompany.gerenciadordetarefas.model.Tarefa;
 import com.mycompany.gerenciadordetarefas.model.TarefaService;
 
 import java.util.List;
+
 public class TarefaController {
-    TarefaRepository tarefaRepository = new TarefaRepository();
-    TarefaService tarefaService = new TarefaService(tarefaRepository);
+    //    TarefaRepository tarefaRepository = new TarefaRepository();
+//    TarefaService tarefaService = new TarefaService(tarefaRepository);
+    private final TarefaRepository tarefaRepository;
+    private final TarefaService tarefaService;
+
+    public TarefaController(TarefaRepository tarefaRepository, TarefaService tarefaService) {
+        this.tarefaRepository = tarefaRepository;
+        this.tarefaService = tarefaService;
+    }
 
     public void removerTarefa(String usuario, String titulo) {
         List<Tarefa> tarefas = TarefaRepository.carregarTarefas(usuario);
 
         if (tarefas != null) {
-            TarefaService.excluirTarefa(tarefas, titulo);
+            tarefaService.excluirTarefa(tarefas, titulo);
             tarefaRepository.salvarTarefas(tarefas);
         } else {
-            System.err.println("Não foi possível remover tarefa");
+            throw new RuntimeException("Não foi possível carregar as tarefas.");
         }
     }
 
-    public void cadastrarTarefa(Tarefa tarefa)  {
+    public void cadastrarTarefa(Tarefa tarefa) {
         tarefaService.cadastrarTarefa(tarefa);
     }
 

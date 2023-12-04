@@ -18,6 +18,7 @@ public class Tarefa {
         this.concluida = concluida;
         this.importancia = importancia;
     }
+
     public String getDescricao() {
         return descricao;
     }

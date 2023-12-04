@@ -77,37 +77,64 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
     }
 
 
-    private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
-        String usuario = jTextFieldCriarUsuario.getText();
-        String senha = new String(jPasswordFieldCriarSenha.getPassword());
+//    private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
+//        String usuario = jTextFieldCriarUsuario.getText();
+//        String senha = new String(jPasswordFieldCriarSenha.getPassword());
+//
+//        try {
+//            JSONArray usuariosArray;
+//
+//            if (Files.exists(Paths.get(ARQUIVO_USUARIOS))) {
+//                String usuariosJson = new String(Files.readAllBytes(Paths.get(ARQUIVO_USUARIOS)));
+//                usuariosArray = new JSONArray(usuariosJson);
+//            } else {
+//                usuariosArray = new JSONArray();
+//            }
+//
+//            JSONObject novoUsuario = new JSONObject();
+//            novoUsuario.put("Usuario", usuario);
+//            novoUsuario.put("Senha", senha);
+//
+//            usuariosArray.put(novoUsuario);
+//
+//            Files.write(Paths.get(ARQUIVO_USUARIOS), usuariosArray.toString().getBytes());
+//
+//            JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
+//
+//            jTextFieldCriarUsuario.setText("");
+//            jPasswordFieldCriarSenha.setText("");
+//
+//        } catch (IOException e) {
+//            JOptionPane.showMessageDialog(this, "Erro ao criar/atualizar o arquivo JSON: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+//        }
+//    }
+private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
+    String usuario = jTextFieldCriarUsuario.getText();
+    String senha = new String(jPasswordFieldCriarSenha.getPassword());
 
-        try {
-            JSONArray usuariosArray;
+    try {
+        JSONArray usuariosArray = Files.exists(Paths.get(ARQUIVO_USUARIOS))
+                ? new JSONArray(new String(Files.readAllBytes(Paths.get(ARQUIVO_USUARIOS))))
+                : new JSONArray();
 
-            if (Files.exists(Paths.get(ARQUIVO_USUARIOS))) {
-                String usuariosJson = new String(Files.readAllBytes(Paths.get(ARQUIVO_USUARIOS)));
-                usuariosArray = new JSONArray(usuariosJson);
-            } else {
-                usuariosArray = new JSONArray();
-            }
+        JSONObject novoUsuario = new JSONObject();
+        novoUsuario.put("Usuario", usuario);
+        novoUsuario.put("Senha", senha);
 
-            JSONObject novoUsuario = new JSONObject();
-            novoUsuario.put("Usuario", usuario);
-            novoUsuario.put("Senha", senha);
+        usuariosArray.put(novoUsuario);
 
-            usuariosArray.put(novoUsuario);
+        Files.write(Paths.get(ARQUIVO_USUARIOS), usuariosArray.toString().getBytes());
 
-            Files.write(Paths.get(ARQUIVO_USUARIOS), usuariosArray.toString().getBytes());
+        JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
 
-            JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
+        jTextFieldCriarUsuario.setText("");
+        jPasswordFieldCriarSenha.setText("");
 
-            jTextFieldCriarUsuario.setText("");
-            jPasswordFieldCriarSenha.setText("");
-
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(this, "Erro ao criar/atualizar o arquivo JSON: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
-        }
+    } catch (IOException e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Erro ao criar/atualizar o arquivo JSON: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
     }
+}
 
     private void jTextFieldCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {
     }

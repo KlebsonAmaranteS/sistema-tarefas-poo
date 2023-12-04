@@ -4,6 +4,7 @@ package com.mycompany.gerenciadordetarefas.view;
 import com.mycompany.gerenciadordetarefas.controller.TarefaController;
 import com.mycompany.gerenciadordetarefas.controller.TarefaRepository;
 import com.mycompany.gerenciadordetarefas.model.Tarefa;
+import com.mycompany.gerenciadordetarefas.model.TarefaService;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -13,14 +14,19 @@ import java.util.List;
 import static com.mycompany.gerenciadordetarefas.view.TelaLogin.usuarioLogado;
 
 public class TelaPrincipal extends javax.swing.JFrame {
-    TarefaController tarefaController = new TarefaController();
+    private final TarefaController tarefaController;
+    private final TarefaRepository tarefaRepository;
+    private final TarefaService tarefaService;
     private List<Tarefa> tarefas;
     private final JFrame frame;
 
-    public TelaPrincipal() {
+    public TelaPrincipal(TarefaController tarefaController, TarefaRepository tarefaRepository, TarefaService tarefaService) {
         initComponents();
         this.tarefas = new ArrayList<>();
         this.frame =  new JFrame("Sistema tarefas");
+        this.tarefaController = tarefaController;
+        this.tarefaRepository = tarefaRepository;
+        this.tarefaService = tarefaService;
         try {
             jButtonListarTarefa1ActionPerformed(null);
         } catch (IOException e) {
@@ -299,7 +305,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
 
     private void jButtonCriarTarefaActionPerformed(java.awt.event.ActionEvent evt) {
-        InterfaceTarefa telaCadastro = new InterfaceTarefa(tarefaController);
+        InterfaceTarefa telaCadastro = new InterfaceTarefa(tarefaController, tarefaRepository, tarefaService);
         telaCadastro.setVisible(true);
     }
 

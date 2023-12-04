@@ -1,5 +1,8 @@
 package com.mycompany.gerenciadordetarefas.view;
 
+import com.mycompany.gerenciadordetarefas.controller.TarefaController;
+import com.mycompany.gerenciadordetarefas.controller.TarefaRepository;
+import com.mycompany.gerenciadordetarefas.model.TarefaService;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -10,7 +13,10 @@ import java.nio.file.Paths;
 
 public class TelaLogin extends javax.swing.JFrame {
 
-    public TelaLogin() {
+    private final TelaPrincipal telaPrincipal;
+
+    public TelaLogin(TarefaRepository tarefaRepository, TarefaController tarefaController, TarefaService tarefaService) {
+        this.telaPrincipal = new TelaPrincipal(tarefaController, tarefaRepository, tarefaService);
         initComponents();
         jPasswordFieldSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,8 +118,7 @@ public class TelaLogin extends javax.swing.JFrame {
                     if (usuarioObj.getString("Usuario").equals(usuario) && usuarioObj.getString("Senha").equals(senha)) {
                         usuarioLogado = usuario;
 
-                        TelaPrincipal tela = new TelaPrincipal();
-                        tela.setVisible(true);
+                        telaPrincipal.setVisible(true);
                         dispose();
                         return;
                     }

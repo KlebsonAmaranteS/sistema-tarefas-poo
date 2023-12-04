@@ -18,14 +18,18 @@ import static com.mycompany.gerenciadordetarefas.view.TelaLogin.usuarioLogado;
 public class InterfaceTarefa extends javax.swing.JFrame {
 
     private final JList<Tarefa> list;
-    TelaPrincipal telaPrincipal = new TelaPrincipal();
+    private final TarefaRepository tarefaPersistence;
     private final TarefaController tarefaController;
+    private final TelaPrincipal telaPrincipal;
+    private final TarefaService tarefaService;
 
     private List<Tarefa> tarefas;
-    TarefaRepository tarefaPersistence = new TarefaRepository();
-    TarefaService tarefaService = new TarefaService(tarefaPersistence);
-    public InterfaceTarefa(TarefaController tarefaController) {
+
+    public InterfaceTarefa(TarefaController tarefaController, TarefaRepository tarefaPersistence, TarefaService tarefaService) {
         this.tarefaController = tarefaController;
+        this.tarefaPersistence = tarefaPersistence;
+        this.tarefaService = tarefaService;
+        this.telaPrincipal = new TelaPrincipal(tarefaController, tarefaPersistence, tarefaService);
         this.list = new JList<>();
         tarefas = new ArrayList<>();
         initComponents();
@@ -35,7 +39,6 @@ public class InterfaceTarefa extends javax.swing.JFrame {
         buttonGroup2.add(jRadioButtonMedia);
         buttonGroup2.add(jRadioButtonAlta);
     }
-
 
 
     private void initComponents() {
@@ -169,10 +172,9 @@ public class InterfaceTarefa extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             cadastrarTarefa(usuarioLogado);
-            salvarTarefasEmJSON(usuarioLogado);
             this.dispose();
         } catch (ParseException | DataInvalidaException | IOException e) {
-            JOptionPane.showMessageDialog(this, "Formato de data inválido. Por favor, insira uma data válida.", "Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao cadastrar tarefa: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -196,69 +198,32 @@ public class InterfaceTarefa extends javax.swing.JFrame {
         String descricao = jTextArea1.getText();
         String dataConclusao = jFormattedTextFieldData.getText();
 
-        // Verificar se o título foi fornecido
-        if (titulo.trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor, forneça um título para a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
+        // Validações de entrada
+        if (titulo.trim().isEmpty() || descricao.trim().isEmpty() || dataConclusao.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, preencha todos os campos.", "Erro", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        // Verificar se a descrição foi fornecida
-        if (descricao.trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor, forneça uma descrição para a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+        DataValidator.validarData(dataConclusao);
 
-        // Verificar se a data de conclusão foi fornecida e é válida
-        if (dataConclusao.trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor, forneça uma data de conclusão para a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+        Tarefa novaTarefa = new Tarefa(
+                usuario,
+                titulo,
+                descricao,
+                DataValidator.validarData(dataConclusao),
+                jRadioButtonConcluida.isSelected(),
+                obterImportanciaSelecionada()
+        );
 
-        try {
-            DataValidator.validarData(dataConclusao);
-        } catch (DataInvalidaException e) {
-            JOptionPane.showMessageDialog(this, "Formato de data inválido. Por favor, insira uma data válida.", "Erro", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        // Verificar se pelo menos uma opção de status foi marcada
-        if (!jRadioButtonConcluida.isSelected() && !jRadioButtonNaoConcluida.isSelected()) {
-            JOptionPane.showMessageDialog(this, "Por favor, selecione o status da tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        // Verificar se pelo menos uma opção de importância foi marcada
-        if (!jRadioButtonBaixa.isSelected() && !jRadioButtonMedia.isSelected() && !jRadioButtonAlta.isSelected()) {
-            JOptionPane.showMessageDialog(this, "Por favor, selecione a importância da tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        else {
-            // Restante do código para criar a nova tarefa
-            Tarefa novaTarefa = new Tarefa(
-                    usuario,
-                    titulo,
-                    descricao,
-                    DataValidator.validarData(dataConclusao),
-                    jRadioButtonConcluida.isSelected(),
-                    obterImportanciaSelecionada()
-            );
-
-            tarefaController.cadastrarTarefa(novaTarefa);
-
-            JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-        }}
-
+        tarefaController.cadastrarTarefa(novaTarefa);
+        salvarTarefasEmJSON(usuario);
+        JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+    }
 
 
     private void salvarTarefasEmJSON(String usuario) throws IOException {
 
-        TarefaController tarefaController = new TarefaController();
-
-        // Carregar as tarefas existentes do arquivo JSON
         List<Tarefa> tarefasExistente = TarefaRepository.carregarTarefas(usuario);
-
-        // Criar a nova tarefa com os dados informados na interface
         Tarefa novaTarefa = new Tarefa(
                 usuario,
                 jTextFieldTitulo.getText(),
@@ -268,14 +233,9 @@ public class InterfaceTarefa extends javax.swing.JFrame {
                 obterImportanciaSelecionada()
         );
 
-        // Adicionar a nova tarefa à lista existente
         tarefasExistente.add(novaTarefa);
 
-        // Salvar a lista atualizada no arquivo JSON
         tarefaPersistence.salvarTarefas(tarefasExistente);
-
-        // Atualizar a lista de tarefas na interface (se necessário)
-        TelaPrincipal telaPrincipal = new TelaPrincipal();
         telaPrincipal.atualizarListaTarefas(tarefasExistente);
 
     }

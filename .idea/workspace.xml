@@ -1,16 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="GerenciadorDeTarefas:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20171799-7ab4-40e3-8ea9-bc07c7554f57" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/controller/TarefaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/controller/TarefaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/controller/TarefaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/controller/TarefaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/model/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/model/Tarefa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/model/TarefaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/model/TarefaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/view/InterfaceTarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/view/InterfaceTarefa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/view/TelaCadastroUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/view/TelaCadastroUsuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/view/TelaEdicaoTarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/view/TelaEdicaoTarefa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/view/TelaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/view/TelaLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/view/TelaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/com/mycompany/gerenciadordetarefas/view/TelaPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/main/java/com/mycompany/gerenciadordetarefas/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/controller/TarefaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/controller/TarefaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/controller/TarefaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/controller/TarefaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/model/Tarefa.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/model/Tarefa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/model/TarefaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/model/TarefaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/InterfaceTarefa$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/InterfaceTarefa$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/InterfaceTarefa$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/InterfaceTarefa$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/InterfaceTarefa$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/InterfaceTarefa$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/InterfaceTarefa$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/InterfaceTarefa$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/InterfaceTarefa.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/InterfaceTarefa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaCadastroUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaCadastroUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaEdicaoTarefa$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaEdicaoTarefa$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaEdicaoTarefa$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaEdicaoTarefa$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaEdicaoTarefa$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaEdicaoTarefa$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaEdicaoTarefa$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaEdicaoTarefa$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaEdicaoTarefa.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaEdicaoTarefa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaLogin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/com/mycompany/gerenciadordetarefas/view/TelaPrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tarefas.json" beforeDir="false" afterPath="$PROJECT_DIR$/tarefas.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +84,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/klebs/OneDrive/Documentos/GitHub/sistema-tarefas-poo&quot;,
@@ -40,10 +92,20 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\klebs\OneDrive\Documentos\GitHub\sistema-tarefas-poo\GerenciadorDeTarefas" />
+      <recent name="C:\Users\klebs\OneDrive\Documentos\GitHub\sistema-tarefas-poo" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mycompany.gerenciadordetarefas.Main" />
@@ -76,6 +138,12 @@
       <workItem from="1701487607972" duration="205000" />
       <workItem from="1701542996792" duration="1909000" />
       <workItem from="1701566865738" duration="413000" />
+      <workItem from="1701609363363" duration="1585000" />
+      <workItem from="1701690637422" duration="7388000" />
+      <workItem from="1701698546335" duration="203000" />
+      <workItem from="1701703086425" duration="426000" />
+      <workItem from="1701703605797" duration="1625000" />
+      <workItem from="1701705262660" duration="809000" />
     </task>
     <servers />
   </component>
