@@ -1,0 +1,24 @@
+
+J
+java:S1604""(Make this anonymous inner class a lambda(ÑĞİĞıÿÿÿÿ8Â·¶­Ã1
+J
+java:S16042"(Make this anonymous inner class a lambda(’ñÕìÿÿÿÿÿ8Ã·¶­Ã1
+E
+java:S1604;"(Make this anonymous inner class a lambda(Ô¡Ñ’8Ã·¶­Ã1
+{
+java:S1450"XRemove the "blusuario" field and declare it as a local variable in the relevant methods.(ä°âÎüÿÿÿÿ8ï·¶­Ã1
+}
+java:S1450›"_Remove the "jButtonCadastrar" field and declare it as a local variable in the relevant methods.(”¤Û¾8ï·¶­Ã1
+
+java:S1450œ"\Remove the "jButtonVoltar" field and declare it as a local variable in the relevant methods.(åæ´Ìıÿÿÿÿ8ğ·¶­Ã1
+u
+java:S1450"WRemove the "lblsenha" field and declare it as a local variable in the relevant methods.(ÊƒÄŒ8ğ·¶­Ã1
+\
+java:S1161D":Add the "@Override" annotation above this method signature(óÚ°ùÿÿÿÿ8‰¸¶­Ã1
+G
+java:S1172o"*Remove this unused method parameter "evt".(Ôÿè™8¸¶­Ã1
+X	java:S125P"<This block of commented-out lines of code should be removed.(ˆïÜ8¸¶­Ã1
+M
+java:S1172‹"*Remove this unused method parameter "evt".(ôÏßòøÿÿÿÿ8¸¶­Ã1
+H
+java:S1172‘"*Remove this unused method parameter "evt".(˜³™•8Ÿ¸¶­Ã1

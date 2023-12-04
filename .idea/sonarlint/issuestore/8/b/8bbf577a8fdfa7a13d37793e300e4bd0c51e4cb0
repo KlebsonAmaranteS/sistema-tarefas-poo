@@ -1,0 +1,51 @@
+
+_
+java:S1192>"IDefine a constant instead of duplicating this literal "Segoe UI" 5 times.(ÙÌÎ
+C
+java:S1604H"(Make this anonymous inner class a lambda(û‰Ùïşÿÿÿÿ
+C
+java:S1604U"(Make this anonymous inner class a lambda(‹ˆçŠıÿÿÿÿ
+C
+java:S1604h"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ
+>
+java:S1604q"(Make this anonymous inner class a lambda(ÿóÎ×
+n
+java:S1450ç"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶
+n
+java:S1450è"WRemove the "jButton2" field and declare it as a local variable in the relevant methods.(¤½ÃÜ
+r
+java:S1450ê"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ
+r
+java:S1450ë"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ
+r
+java:S1450ì"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ
+m
+java:S1450í"VRemove the "jLabel4" field and declare it as a local variable in the relevant methods.(«¢•ã
+m
+java:S1450î"VRemove the "jLabel5" field and declare it as a local variable in the relevant methods.(ó Ù®
+w
+java:S1450ô"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ
+M
+java:S1948"2Make "tarefaParaEditar" transient or serializable.(ÂöÌ¹úÿÿÿÿ
+I
+java:S1948"3Make "tarefaPersistence" transient or serializable.(òÛ–€
+B
+java:S1172",Remove this unused method parameter "modal".(•…Ù‰
+R
+java:S1481$"7Remove this unused "jTextAreaDescricao" local variable.(ÄŞê…üÿÿÿÿ
+[
+java:S1481%"ERemove this unused "jFormattedTextFieldDataConclusao" local variable.(âÁ•Ë
+F
+java:S1172Ÿ"*Remove this unused method parameter "evt".(ïòÿÕÿÿÿÿÿ
+A
+java:S1172¢"*Remove this unused method parameter "evt".(è§Úø
+A
+java:S1172¦"*Remove this unused method parameter "evt".(‚À‡ä
+N
+java:S1135§"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+F
+java:S1172ª"*Remove this unused method parameter "evt".(ÿŞÿĞøÿÿÿÿ
+q
+java:S3923µ"[Remove this conditional structure or edit its code blocks so that they're not all the same.(è©÷
+ƒ
+java:S1130Õ"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¤ßú¬
