@@ -18,7 +18,6 @@ public class Tarefa {
         this.concluida = concluida;
         this.importancia = importancia;
     }
-
     public String getDescricao() {
         return descricao;
     }
@@ -63,7 +62,7 @@ public class Tarefa {
         this.dataConclusao = dataConclusao;
     }
 
-    public boolean setStatus() {
+    public boolean setStatus(boolean concluída) {
         return concluida;
     }
     @Override
@@ -84,3 +83,4 @@ public class Tarefa {
         return Objects.hash(titulo, descricao);
     }
 }
+

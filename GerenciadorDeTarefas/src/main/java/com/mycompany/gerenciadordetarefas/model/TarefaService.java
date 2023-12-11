@@ -4,46 +4,40 @@ import com.mycompany.gerenciadordetarefas.controller.TarefaRepository;
 
 
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 public class TarefaService {
     private TarefaRepository tarefaPersistence;
-
     public TarefaService(TarefaRepository tarefaPersistence) {
-        Objects.requireNonNull(tarefaPersistence, "TarefaRepository não pode ser nulo");
         this.tarefaPersistence = tarefaPersistence;
     }
 
-    public List<Tarefa> carregarTarefas(String usuario) {
+    public List<Tarefa> carregarTarefas(String usuario)  {
         return TarefaRepository.carregarTarefas(usuario);
     }
 
-    public void cadastrarTarefa(Tarefa tarefaEditada) {
-        try {
-            List<Tarefa> todasAsTarefas = carregarTarefas(tarefaEditada.getUsuario());
+    public void cadastrarTarefa(Tarefa tarefaEditada)  {
+        List<Tarefa> todasAsTarefas = carregarTarefas(tarefaEditada.getUsuario());
 
-            if (todasAsTarefas != null) {
-                Optional<Tarefa> tarefaOriginal = tarefaPersistence.buscarTarefaPorTitulo(tarefaEditada.getUsuario(), tarefaEditada.getTitulo());
+        if (todasAsTarefas != null) {
+            Optional<Tarefa> tarefaOriginal = todasAsTarefas.stream()
+                    .filter(t -> t.getTitulo().equals(tarefaEditada.getTitulo()))
+                    .findFirst();
 
+            tarefaOriginal.ifPresent(original -> {
+                original.setDescricao(tarefaEditada.getDescricao());
+                original.setDataConclusao(tarefaEditada.getDataConclusao());
+                original.setConcluida(tarefaEditada.isConcluida());
+                original.setImportancia(tarefaEditada.getImportancia());
+            });
 
-                tarefaOriginal.ifPresent(original -> {
-                    original.setDescricao(tarefaEditada.getDescricao());
-                    original.setDataConclusao(tarefaEditada.getDataConclusao());
-                    original.setConcluida(tarefaEditada.isConcluida());
-                    original.setImportancia(tarefaEditada.getImportancia());
-                });
-                tarefaPersistence.salvarTarefas(todasAsTarefas);
-
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+            tarefaPersistence.salvarTarefas(todasAsTarefas);
+        } else {
+            System.err.println("Não foi possível carregar as tarefas");
         }
     }
 
-
-    public void excluirTarefa(List<Tarefa> tarefas, String titulo) {
+    public static void excluirTarefa(List<Tarefa> tarefas, String titulo) {
         tarefas.removeIf(tarefa -> tarefa.getTitulo().equals(titulo));
     }
 }
-

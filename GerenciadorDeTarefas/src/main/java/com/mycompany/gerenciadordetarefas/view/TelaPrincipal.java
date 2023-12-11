@@ -117,7 +117,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jButton2.setText("Buscar");
 
-        jButtonRemoverTarefa1.setText("Atualizar Tarefas");
+        jButtonRemoverTarefa1.setText("Listar Tarefas");
         jButtonRemoverTarefa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 try {
@@ -252,7 +252,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
                         defaultListModel.remove(selectedIndex);
                         tarefaController.removerTarefa(usuarioLogado, selectedTask.getTitulo());
-                        tarefas.remove(selectedTask); // Remova a tarefa da lista local também
+                        tarefas.remove(selectedTask); 
                     } else {
                         JOptionPane.showMessageDialog(frame, "Não foi possível remover a tarefa");
                     }
@@ -273,7 +273,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButtonRemoverTarefa1.setText("Atualizar Tarefas");
+        jButtonRemoverTarefa1.setText("Listar Tarefas");
         jButtonRemoverTarefa1.addActionListener(new java.awt.event.ActionListener() {
 
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -305,7 +305,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
 
     private void jButtonCriarTarefaActionPerformed(java.awt.event.ActionEvent evt) {
-        InterfaceTarefa telaCadastro = new InterfaceTarefa(tarefaController, tarefaRepository, tarefaService);
+        InterfaceTarefa telaCadastro = new InterfaceTarefa(tarefaController);
         telaCadastro.setVisible(true);
     }
 
@@ -322,6 +322,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(frame, "Nenhuma tarefa para listar");
         }
     }
+
 
 
     private javax.swing.JButton jButton1;

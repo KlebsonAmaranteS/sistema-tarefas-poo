@@ -13,10 +13,15 @@ import java.nio.file.Paths;
 
 public class TelaLogin extends javax.swing.JFrame {
 
-    private final TelaPrincipal telaPrincipal;
-
-    public TelaLogin(TarefaRepository tarefaRepository, TarefaController tarefaController, TarefaService tarefaService) {
-        this.telaPrincipal = new TelaPrincipal(tarefaController, tarefaRepository, tarefaService);
+    private final TelaPrincipal tela;
+    private final TarefaController tarefaController;
+    private final TarefaRepository tarefaRepository;
+    private final TarefaService tarefaService;
+    public TelaLogin() {
+        this.tarefaController = new TarefaController();
+        this.tarefaRepository = new TarefaRepository();
+        this.tarefaService = new TarefaService(tarefaRepository);
+        this.tela = new TelaPrincipal(tarefaController, tarefaRepository, tarefaService);
         initComponents();
         jPasswordFieldSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,26 +122,22 @@ public class TelaLogin extends javax.swing.JFrame {
 
                     if (usuarioObj.getString("Usuario").equals(usuario) && usuarioObj.getString("Senha").equals(senha)) {
                         usuarioLogado = usuario;
-
-                        telaPrincipal.setVisible(true);
+                        tela.setVisible(true);
                         dispose();
                         return;
                     }
                 }
             }
 
-            // Exibe uma mensagem se a autenticação falhar
             JOptionPane.showMessageDialog(rootPane, "Acesso Negado!");
 
         } catch (IOException e) {
-            // Exibe uma mensagem de erro em caso de falha na leitura do arquivo JSON
             JOptionPane.showMessageDialog(this, "Erro ao ler o arquivo JSON: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // Abre a tela de cadastro de usuários
         TelaCadastroUsuario telaCadastro = new TelaCadastroUsuario();
         telaCadastro.setVisible(true);
     }

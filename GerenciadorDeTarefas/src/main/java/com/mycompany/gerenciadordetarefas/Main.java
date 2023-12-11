@@ -1,8 +1,6 @@
 package com.mycompany.gerenciadordetarefas;
 
-import com.mycompany.gerenciadordetarefas.controller.TarefaController;
-import com.mycompany.gerenciadordetarefas.controller.TarefaRepository;
-import com.mycompany.gerenciadordetarefas.model.TarefaService;
+
 import com.mycompany.gerenciadordetarefas.view.TelaLogin;
 
 public class Main {
@@ -19,11 +17,8 @@ public class Main {
             java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
-        TarefaRepository tarefaRepository = new TarefaRepository();
-        TarefaService tarefaService = new TarefaService(tarefaRepository);
-        TarefaController tarefaController = new TarefaController(tarefaRepository, tarefaService);
 
-        TelaLogin telaLogin = new TelaLogin(tarefaRepository, tarefaController, tarefaService);
+        TelaLogin telaLogin = new TelaLogin();
         telaLogin.setVisible(true);
     }
 }

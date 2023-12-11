@@ -13,13 +13,14 @@ import static com.mycompany.gerenciadordetarefas.view.TelaLogin.usuarioLogado;
 public class TelaEdicaoTarefa extends javax.swing.JFrame {
     private final TelaPrincipal telaPrincipal;
     private final Tarefa tarefaParaEditar;
-    TarefaRepository tarefaPersistence = new TarefaRepository();
+    private final TarefaRepository tarefaPersistence;
 
     public TelaEdicaoTarefa(TelaPrincipal telaPrincipal, boolean modal, Tarefa tarefaParaEditar) {
 
         initComponents();
         this.telaPrincipal = telaPrincipal;
         this.tarefaParaEditar = tarefaParaEditar;
+        this.tarefaPersistence = new TarefaRepository();
         preencherCampos();
         buttonGroup1.add(jRadioButtonNaoConcluida);
         buttonGroup1.add(jRadioButtonConcluida);
@@ -112,7 +113,11 @@ public class TelaEdicaoTarefa extends javax.swing.JFrame {
         jButton2.setText("Concluir");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                try {
+                    jButton2ActionPerformed(evt);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
         getContentPane().add(jButton2);
@@ -154,45 +159,44 @@ public class TelaEdicaoTarefa extends javax.swing.JFrame {
         jTextFieldTitulo.setText(tarefaParaEditar.getTitulo());
         jTextArea1.setText(tarefaParaEditar.getDescricao());
         jFormattedTextFieldData.setText(tarefaParaEditar.getDataConclusao());
-    }
-
-    private void jTextFieldTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTituloActionPerformed
-    }
-
-    private void jFormattedTextFieldDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextFieldDataActionPerformed
 
     }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+    private void jTextFieldTituloActionPerformed(java.awt.event.ActionEvent evt) {
     }
 
-private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-    Tarefa tarefaEditada = new Tarefa(usuarioLogado, "Poo", "Java", "21/12/2023", true, "alta");
-    tarefaEditada.setTitulo(jTextFieldTitulo.getText());
-    tarefaEditada.setDescricao(jTextArea1.getText());
-    tarefaEditada.setDataConclusao(jFormattedTextFieldData.getText());
+    private void jFormattedTextFieldDataActionPerformed(java.awt.event.ActionEvent evt) {
 
-    if (!isOpcaoSelecionada()) {
-        JOptionPane.showMessageDialog(this, "Por favor, selecione uma opção para Status e Importância.", "Erro", JOptionPane.ERROR_MESSAGE);
-        return;
     }
 
-    if (jRadioButtonConcluida.isSelected()) {
-        tarefaEditada.setStatus();
-    } else {
-        tarefaEditada.setStatus();
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
     }
 
-    if (jRadioButtonBaixa.isSelected()) {
-        tarefaEditada.setImportancia("Baixa");
-    } else if (jRadioButtonMedia.isSelected()) {
-        tarefaEditada.setImportancia("Média");
-    } else {
-        tarefaEditada.setImportancia("Alta");
-    }
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
+        Tarefa tarefaEditada = new Tarefa(usuarioLogado, "Poo", "Java", "21/12/2023", true, "alta");
+        tarefaEditada.setTitulo(jTextFieldTitulo.getText());
+        tarefaEditada.setDescricao(jTextArea1.getText());
+        tarefaEditada.setDataConclusao(jFormattedTextFieldData.getText());
 
-    try {
+        if (!isOpcaoSelecionada()) {
+            JOptionPane.showMessageDialog(this, "Por favor, selecione uma opção para Status e Importância.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        if (jRadioButtonConcluida.isSelected()) {
+            tarefaEditada.setStatus(true);
+        } else {
+            tarefaEditada.setStatus(false);
+        }
+
+        if (jRadioButtonBaixa.isSelected()) {
+            tarefaEditada.setImportancia("Baixa");
+        } else if (jRadioButtonMedia.isSelected()) {
+            tarefaEditada.setImportancia("Média");
+        } else {
+            tarefaEditada.setImportancia("Alta");
+        }
+
         if (editarTarefa(tarefaParaEditar, tarefaEditada)) {
             JOptionPane.showMessageDialog(this, "Tarefa editada com sucesso!");
             dispose();
@@ -200,10 +204,7 @@ private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         } else {
             JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
         }
-    } catch (IOException e) {
-        JOptionPane.showMessageDialog(this, "Erro ao salvar as alterações: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
     }
-}
 
     private boolean isOpcaoSelecionada() {
         return (jRadioButtonNaoConcluida.isSelected() || jRadioButtonConcluida.isSelected()) &&

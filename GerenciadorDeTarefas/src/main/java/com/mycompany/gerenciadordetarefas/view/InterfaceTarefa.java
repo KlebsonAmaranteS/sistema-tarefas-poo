@@ -16,20 +16,17 @@ import java.util.List;
 import static com.mycompany.gerenciadordetarefas.view.TelaLogin.usuarioLogado;
 
 public class InterfaceTarefa extends javax.swing.JFrame {
-
-    private final TarefaRepository tarefaPersistence;
-    private final TarefaController tarefaController;
-    private final TelaPrincipal telaPrincipal;
-    private final TarefaService tarefaService;
-
+    private final TarefaController tarefaController ;
     private List<Tarefa> tarefas;
-
-    public InterfaceTarefa(TarefaController tarefaController, TarefaRepository tarefaPersistence, TarefaService tarefaService) {
-        this.tarefaController = tarefaController;
-        this.tarefaPersistence = tarefaPersistence;
-        this.tarefaService = tarefaService;
+    private final TarefaRepository tarefaPersistence;
+    private final TarefaService tarefaService;
+    private final TelaPrincipal telaPrincipal;
+    public InterfaceTarefa(TarefaController tarefaController) {
+        this.tarefaController = new TarefaController();
+        this.tarefaPersistence = new TarefaRepository();
+        this.tarefaService =  new TarefaService(tarefaPersistence);
         this.telaPrincipal = new TelaPrincipal(tarefaController, tarefaPersistence, tarefaService);
-        this.tarefas = new ArrayList<>();
+        tarefas = new ArrayList<>();
         initComponents();
         buttonGroup1.add(jRadioButtonNaoConcluida);
         buttonGroup1.add(jRadioButtonConcluida);
@@ -37,6 +34,7 @@ public class InterfaceTarefa extends javax.swing.JFrame {
         buttonGroup2.add(jRadioButtonMedia);
         buttonGroup2.add(jRadioButtonAlta);
     }
+
 
 
     private void initComponents() {
@@ -170,44 +168,71 @@ public class InterfaceTarefa extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             cadastrarTarefa(usuarioLogado);
+            salvarTarefasEmJSON(usuarioLogado);
             this.dispose();
         } catch (ParseException | DataInvalidaException | IOException e) {
-            JOptionPane.showMessageDialog(this, "Erro ao cadastrar tarefa: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Formato de data inválido. Por favor, insira uma data válida.", "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
-
 
     public void cadastrarTarefa(String usuario) throws ParseException, DataInvalidaException, IOException {
         String titulo = jTextFieldTitulo.getText();
         String descricao = jTextArea1.getText();
         String dataConclusao = jFormattedTextFieldData.getText();
 
-        // Validações de entrada
-        if (titulo.trim().isEmpty() || descricao.trim().isEmpty() || dataConclusao.trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor, preencha todos os campos.", "Erro", JOptionPane.ERROR_MESSAGE);
+        if (titulo.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, forneça um título para a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        DataValidator.validarData(dataConclusao);
+        if (descricao.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, forneça uma descrição para a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
 
-        Tarefa novaTarefa = new Tarefa(
-                usuario,
-                titulo,
-                descricao,
-                DataValidator.validarData(dataConclusao),
-                jRadioButtonConcluida.isSelected(),
-                obterImportanciaSelecionada()
-        );
+        if (dataConclusao.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, forneça uma data de conclusão para a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
 
-        tarefaController.cadastrarTarefa(novaTarefa);
-        salvarTarefasEmJSON(usuario);
-        JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-    }
+        try {
+            DataValidator.validarData(dataConclusao);
+        } catch (DataInvalidaException e) {
+            JOptionPane.showMessageDialog(this, "Formato de data inválido. Por favor, insira uma data válida.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        if (!jRadioButtonConcluida.isSelected() && !jRadioButtonNaoConcluida.isSelected()) {
+            JOptionPane.showMessageDialog(this, "Por favor, selecione o status da tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        if (!jRadioButtonBaixa.isSelected() && !jRadioButtonMedia.isSelected() && !jRadioButtonAlta.isSelected()) {
+            JOptionPane.showMessageDialog(this, "Por favor, selecione a importância da tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        else {
+            Tarefa novaTarefa = new Tarefa(
+                    usuario,
+                    titulo,
+                    descricao,
+                    DataValidator.validarData(dataConclusao),
+                    jRadioButtonConcluida.isSelected(),
+                    obterImportanciaSelecionada()
+            );
+
+            tarefaController.cadastrarTarefa(novaTarefa);
+
+            JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+        }}
+
 
 
     private void salvarTarefasEmJSON(String usuario) throws IOException {
 
         List<Tarefa> tarefasExistente = TarefaRepository.carregarTarefas(usuario);
+
         Tarefa novaTarefa = new Tarefa(
                 usuario,
                 jTextFieldTitulo.getText(),
@@ -218,7 +243,6 @@ public class InterfaceTarefa extends javax.swing.JFrame {
         );
 
         tarefasExistente.add(novaTarefa);
-
         tarefaPersistence.salvarTarefas(tarefasExistente);
         telaPrincipal.atualizarListaTarefas(tarefasExistente);
 

@@ -8,10 +8,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class TarefaRepository {
     private static final String CAMINHO_ARQUIVO_JSON = "tarefas.json";
+
     public static List<Tarefa> carregarTarefas(String usuario) {
         try (FileReader reader = new FileReader(CAMINHO_ARQUIVO_JSON)) {
             TypeToken<List<Tarefa>> token = new TypeToken<>() {
@@ -23,10 +24,10 @@ public class TarefaRepository {
             }
 
             return todasAsTarefas.stream()
-                    .filter(tarefa -> tarefa.getUsuario().equals(usuario)).toList();
+                    .filter(tarefa -> tarefa.getUsuario().equals(usuario))
+                    .collect(Collectors.toList());
 
         } catch (IOException e) {
-            e.printStackTrace();
             return new ArrayList<>();
         }
     }
@@ -37,17 +38,4 @@ public class TarefaRepository {
             e.printStackTrace();
         }
     }
-
-    public Optional<Tarefa> buscarTarefaPorTitulo(String usuario, String titulo) {
-        List<Tarefa> todasAsTarefas = carregarTarefas(usuario);
-
-        if (todasAsTarefas != null) {
-            return todasAsTarefas.stream()
-                    .filter(t -> t.getTitulo().equals(titulo))
-                    .findFirst();
-        } else {
-            return Optional.empty();
-        }
-    }
 }
-

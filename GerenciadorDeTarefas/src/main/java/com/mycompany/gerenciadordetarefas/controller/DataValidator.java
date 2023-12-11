@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
 public class DataValidator {
-    
+
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public static String validarData(String data) throws DataInvalidaException {
@@ -21,4 +21,4 @@ public class DataValidator {
             throw new DataInvalidaException("Formato de data inválido. Por favor, insira uma data válida, exemplo: dd/mm/aa.");
         }
     }
-} 
+}
