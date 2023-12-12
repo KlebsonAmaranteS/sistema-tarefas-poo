@@ -1,0 +1,55 @@
+
+d
+java:S1192A"IDefine a constant instead of duplicating this literal "Segoe UI" 5 times.(×Éßøÿÿÿÿ
+C
+java:S1604K"(Make this anonymous inner class a lambda(û‰Ùïşÿÿÿÿ
+C
+java:S1604X"(Make this anonymous inner class a lambda(‹ˆçŠıÿÿÿÿ
+C
+java:S1604k"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ
+>
+java:S1604t"(Make this anonymous inner class a lambda(ÿóÎ×
+
+java:S1186›"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ãİæëüÿÿÿÿ
+
+java:S1186Ÿ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(…£úÿÿÿÿ
+n
+java:S1450ˆ"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶
+n
+java:S1450‰"WRemove the "jButton2" field and declare it as a local variable in the relevant methods.(¤½ÃÜ
+r
+java:S1450‹"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ
+r
+java:S1450Œ"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ
+r
+java:S1450"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ
+m
+java:S1450"VRemove the "jLabel4" field and declare it as a local variable in the relevant methods.(«¢•ã
+m
+java:S1450"VRemove the "jLabel5" field and declare it as a local variable in the relevant methods.(ó Ù®
+w
+java:S1450•"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ
+H
+java:S1948"2Make "tarefaController" transient or serializable.(‡ï’î
+?
+java:S1948")Make "tarefas" transient or serializable.(åŸ’¨
+I
+java:S1948"3Make "tarefaPersistence" transient or serializable.(ã¯
+E
+java:S1948"/Make "tarefaService" transient or serializable.(âµÄ±
+F
+java:S1172›"*Remove this unused method parameter "evt".(ãİæëüÿÿÿÿ
+F
+java:S1172Ÿ"*Remove this unused method parameter "evt".(…£úÿÿÿÿ
+F
+java:S1172£"*Remove this unused method parameter "evt".(‘ òôøÿÿÿÿ
+F
+java:S1172§"*Remove this unused method parameter "evt".(ÿŞÿĞøÿÿÿÿ
+2
+java:S3626Ó"Remove this redundant jump.(ûÁİ…
+ˆ
+java:S1130±"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(â™í‘ÿÿÿÿÿ
+ˆ
+java:S1130ç"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¡éÑÂøÿÿÿÿ
+A
+java:S1068"+Remove this unused "tarefas" private field.(åŸ’¨
