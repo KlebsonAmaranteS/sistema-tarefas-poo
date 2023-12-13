@@ -7,6 +7,8 @@ Psrc/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView.jav
 Msrc/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaEditarView.java,2\0\2036a434d0174461dd8dc6fa36801d959e9f1901
 |
 Lsrc/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaLoginView.java,8\e\8eb9166081086bd7fe3e5942e9c5da1faf550836
+w
+Gsrc/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Usuario.java,7\c\7c2ac8788beee916a94bf1ec8755ca655bec4e6b
 n
 >src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/Main.java,5\1\51249611d50a6b37fc20551a481512109f6824cd
 }
@@ -15,13 +17,5 @@ Msrc/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/TarefaService.java,
 Usrc/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaController.java,0\b\0b9b0f2c22513cdabb6b6e3b2e2c9fef437ddb2d
 y
 Isrc/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView.java,f\b\fb9c9bae3c54f8c1df6dfd32cbe128d80b65b98e
-
-Osrc/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaCadastroView.java,7\4\7489dbb35e84c7687bc2f55b633371a63a901900
-…
-Usrc/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository.java,4\5\4557ed68a0c2730962c1a096bce18ffdb91c73c2
-†
-Vsrc/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/UsuarioController.java,2\5\25a8c1565dc6ef8f84a386284e310f379c894316
 v
 Fsrc/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Tarefa.java,3\8\38012d7eb8c84459bf677a2cdf60e9f12a34361e
-w
-Gsrc/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Usuario.java,7\c\7c2ac8788beee916a94bf1ec8755ca655bec4e6b

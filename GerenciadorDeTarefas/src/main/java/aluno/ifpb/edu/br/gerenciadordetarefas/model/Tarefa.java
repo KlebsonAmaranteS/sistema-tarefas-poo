@@ -75,8 +75,11 @@ public class Tarefa {
 
     @Override
     public String toString() {
-        return getTitulo() + " - " + getDescricao() + " (Conclusão em: " + getDataConclusao() + ")";
+        return String.format("%s - %s (Conclusão em: %s) - Prioridade: %s - Status: %s",
+                getTitulo(), getDescricao(), getDataConclusao(),
+                getImportancia(), isConcluida());
     }
+
 
     @Override
     public int hashCode() {
