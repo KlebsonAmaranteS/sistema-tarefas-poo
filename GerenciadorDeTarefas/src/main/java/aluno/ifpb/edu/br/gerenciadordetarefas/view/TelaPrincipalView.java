@@ -121,7 +121,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
 
         jButton2.setText("Buscar");
 
-        jButtonRemoverTarefa1.setText("Atualizar Tarefas");
+        jButtonRemoverTarefa1.setText("Listar/Atualizar Tarefas");
         jButtonRemoverTarefa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 try {
@@ -205,9 +205,10 @@ public class TelaPrincipalView extends javax.swing.JFrame {
             if (opcao == JOptionPane.YES_OPTION) {
                 TelaEditarView telaEdicao = new TelaEditarView(this, true, tarefaSelecionada);
                 telaEdicao.setVisible(true);
+                listarTarefas();
             }
         } else {
-            System.out.println("Nenhuma tarefa selecionada para editar.");
+            JOptionPane.showMessageDialog(frame, "Nenhuma tarefa selecionada para editar.");
         }
     }
 
@@ -225,6 +226,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             jTextFieldBuscarTarefaActionPerformed(evt);
+            listarTarefas();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -249,6 +251,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
                         defaultListModel.remove(selectedIndex);
                         tarefaController.removerTarefa(usuarioLogado, selectedTask.getTitulo());
                         tarefas.remove(selectedTask);
+                        listarTarefas();
                     } else {
                         JOptionPane.showMessageDialog(frame, "Não foi possível remover a tarefa");
                     }
@@ -268,7 +271,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
             }
         });
 
-        jButtonRemoverTarefa1.setText("Atualizar Tarefas");
+        jButtonRemoverTarefa1.setText("Listar/Atualizar Tarefas");
         jButtonRemoverTarefa1.addActionListener(new java.awt.event.ActionListener() {
 
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -340,5 +343,4 @@ public class TelaPrincipalView extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldBuscarTarefa;
 
 }
-
 

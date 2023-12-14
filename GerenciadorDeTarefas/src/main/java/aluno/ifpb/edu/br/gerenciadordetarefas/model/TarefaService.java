@@ -4,6 +4,7 @@ import aluno.ifpb.edu.br.gerenciadordetarefas.controller.TarefaRepository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class TarefaService {
     private final TarefaRepository tarefaPersistence;
@@ -13,13 +14,14 @@ public class TarefaService {
     }
 
     public List<Tarefa> carregarTarefas(String usuario) {
-        try {
-            return tarefaPersistence.carregarTarefas(usuario);
-        } catch (Exception e) {
-            handleException(e, "Erro ao carregar tarefas");
-            return null;
-        }
+        List<Tarefa> todasAsTarefas = TarefaRepository.carregarTarefas(usuario);
+
+        return todasAsTarefas.stream()
+                .filter(tarefa -> tarefa.getUsuario().equals(usuario))
+                .collect(Collectors.toList());
     }
+
+
 
     public void cadastrarTarefa(Tarefa tarefaEditada) {
         List<Tarefa> todasAsTarefas = carregarTarefas(tarefaEditada.getUsuario());
@@ -36,7 +38,7 @@ public class TarefaService {
                 original.setImportancia(tarefaEditada.getImportancia());
             });
 
-            tarefaPersistence.salvarTarefas(todasAsTarefas);
+            tarefaPersistence.salvarTarefas(todasAsTarefas, tarefaEditada.getUsuario());
         } else {
             System.err.println("Não foi possível carregar as tarefas");
         }

@@ -1,54 +1,58 @@
 
-d
-java:S1192A"IDefine a constant instead of duplicating this literal "Segoe UI" 5 times.(×Éßøÿÿÿÿ
-C
-java:S1604K"(Make this anonymous inner class a lambda(û‰Ùïşÿÿÿÿ
-C
-java:S1604X"(Make this anonymous inner class a lambda(‹ˆçŠıÿÿÿÿ
-C
-java:S1604k"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ
->
-java:S1604t"(Make this anonymous inner class a lambda(ÿóÎ×
-
-java:S1186›"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ãİæëüÿÿÿÿ
-
-java:S1186Ÿ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(…£úÿÿÿÿ
-n
-java:S1450¹"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶
-n
-java:S1450º"WRemove the "jButton2" field and declare it as a local variable in the relevant methods.(¤½ÃÜ
-r
-java:S1450¼"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ
-r
-java:S1450½"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ
-r
-java:S1450¾"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ
-m
-java:S1450¿"VRemove the "jLabel4" field and declare it as a local variable in the relevant methods.(«¢•ã
-m
-java:S1450À"VRemove the "jLabel5" field and declare it as a local variable in the relevant methods.(ó Ù®
-w
-java:S1450Æ"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ
-H
-java:S1948"2Make "tarefaController" transient or serializable.(‡ï’î
-?
-java:S1948")Make "tarefas" transient or serializable.(åŸ’¨
-I
-java:S1948"3Make "tarefaPersistence" transient or serializable.(ã¯
+c	java:S112¼"FDefine and throw a dedicated exception instead of using a generic one.(Êš›ô8ÿíÌÆ1
+k
+java:S1192B"IDefine a constant instead of duplicating this literal "Segoe UI" 5 times.(×Éßøÿÿÿÿ8™¸ŠÌÆ1
+J
+java:S1604L"(Make this anonymous inner class a lambda(û‰Ùïşÿÿÿÿ8š¸ŠÌÆ1
+J
+java:S1604Y"(Make this anonymous inner class a lambda(‹ˆçŠıÿÿÿÿ8š¸ŠÌÆ1
+J
+java:S1604l"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ8š¸ŠÌÆ1
 E
-java:S1948"/Make "tarefaService" transient or serializable.(âµÄ±
+java:S1604u"(Make this anonymous inner class a lambda(ÿóÎ×8š¸ŠÌÆ1
+¤
+java:S1186œ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ãİæëüÿÿÿÿ8°¸ŠÌÆ1
+¤
+java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(…£úÿÿÿÿ8°¸ŠÌÆ1
+u
+java:S1450ø"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶8²¸ŠÌÆ1
+u
+java:S1450ù"WRemove the "jButton2" field and declare it as a local variable in the relevant methods.(¤½ÃÜ8²¸ŠÌÆ1
+y
+java:S1450û"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ8²¸ŠÌÆ1
+y
+java:S1450ü"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ8²¸ŠÌÆ1
+y
+java:S1450ı"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ8²¸ŠÌÆ1
+t
+java:S1450ş"VRemove the "jLabel4" field and declare it as a local variable in the relevant methods.(«¢•ã8³¸ŠÌÆ1
+t
+java:S1450ÿ"VRemove the "jLabel5" field and declare it as a local variable in the relevant methods.(ó Ù®8³¸ŠÌÆ1
+~
+java:S1450…"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ8³¸ŠÌÆ1
+O
+java:S1948"2Make "tarefaController" transient or serializable.(‡ï’î8³¸ŠÌÆ1
 F
-java:S1172›"*Remove this unused method parameter "evt".(ãİæëüÿÿÿÿ
-F
-java:S1172Ÿ"*Remove this unused method parameter "evt".(…£úÿÿÿÿ
-F
-java:S1172£"*Remove this unused method parameter "evt".(‘ òôøÿÿÿÿ
+java:S1948")Make "tarefas" transient or serializable.(åŸ’¨8³¸ŠÌÆ1
+P
+java:S1948"3Make "tarefaPersistence" transient or serializable.(ã¯8³¸ŠÌÆ1
+L
+java:S1948"/Make "tarefaService" transient or serializable.(âµÄ±8³¸ŠÌÆ1
 M
-java:S1172§"*Remove this unused method parameter "evt".(ÿŞÿĞøÿÿÿÿ8å«è˜Æ1
-ˆ
-java:S1130å"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(â™í‘ÿÿÿÿÿ
-^	java:S125±"<This block of commented-out lines of code should be removed.(±òÏÀÿÿÿÿÿ8™éé˜Æ1
-
-java:S1130˜"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¡éÑÂøÿÿÿÿ8å©ë˜Æ1
-A
-java:S1068"+Remove this unused "tarefas" private field.(åŸ’¨
+java:S1172œ"*Remove this unused method parameter "evt".(ãİæëüÿÿÿÿ8Ä¸ŠÌÆ1
+M
+java:S1172 "*Remove this unused method parameter "evt".(…£úÿÿÿÿ8Ä¸ŠÌÆ1
+M
+java:S1172¤"*Remove this unused method parameter "evt".(‘ òôøÿÿÿÿ8Ä¸ŠÌÆ1
+M
+java:S1172¨"*Remove this unused method parameter "evt".(ÿŞÿĞøÿÿÿÿ8™÷ÌÆ1
+Y
+java:S1117½";Rename "tarefas" which hides the field declared at line 20.(›§½Í8Æ¸ŠÌÆ1
+S
+java:S2209½"5Change this instance-reference to a static reference.(›§½Í8Æ¸ŠÌÆ1
+R
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8ŠÂÌÆ1
+Q
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8¬‹ÌÆ1
+Q
+java:S1068"4Remove this unused "tarefaController" private field.(‡ï’î8Ê¸ŠÌÆ1

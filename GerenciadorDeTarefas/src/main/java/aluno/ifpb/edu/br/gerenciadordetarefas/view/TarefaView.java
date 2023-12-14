@@ -11,6 +11,7 @@ import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static aluno.ifpb.edu.br.gerenciadordetarefas.view.TelaLoginView.usuarioLogado;
 
@@ -166,91 +167,43 @@ public class TarefaView extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         try {
-            cadastrarTarefa(usuarioLogado);
+            // Validação dos campos
+            String titulo = jTextFieldTitulo.getText();
+            String descricao = jTextArea1.getText();
+            String dataConclusao = jFormattedTextFieldData.getText();
+
+            validateInput(titulo, descricao, dataConclusao);
+
             salvarTarefasEmJSON(usuarioLogado);
+            telaPrincipal.atualizarListaTarefas(tarefas);
             this.dispose();
-        } catch (DataInvalidaException | IOException e) {
+        } catch (IllegalArgumentException e) {
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Formato de data inválido. Por favor, insira uma data válida.", "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 
-//    public void cadastrarTarefa(String usuario) throws DataInvalidaException, IOException {
-//        String titulo = jTextFieldTitulo.getText();
-//        String descricao = jTextArea1.getText();
-//        String dataConclusao = jFormattedTextFieldData.getText();
-//
-//        if (titulo.trim().isEmpty()) {
-//            JOptionPane.showMessageDialog(this, "Por favor, forneça um título para a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
-//            return;
-//        }
-//
-//        if (descricao.trim().isEmpty()) {
-//            JOptionPane.showMessageDialog(this, "Por favor, forneça uma descrição para a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
-//            return;
-//        }
-//
-//        if (dataConclusao.trim().isEmpty()) {
-//            JOptionPane.showMessageDialog(this, "Por favor, forneça uma data de conclusão para a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
-//            return;
-//        }
-//
-//        try {
-//            DataValidator.validarData(dataConclusao);
-//        } catch (DataInvalidaException e) {
-//            JOptionPane.showMessageDialog(this, "Formato de data inválido. Por favor, insira uma data válida.", "Erro", JOptionPane.ERROR_MESSAGE);
-//            return;
-//        }
-//
-//        if (!jRadioButtonConcluida.isSelected() && !jRadioButtonNaoConcluida.isSelected()) {
-//            JOptionPane.showMessageDialog(this, "Por favor, selecione o status da tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
-//            return;
-//        }
-//
-//        if (!jRadioButtonBaixa.isSelected() && !jRadioButtonMedia.isSelected() && !jRadioButtonAlta.isSelected()) {
-//            JOptionPane.showMessageDialog(this, "Por favor, selecione a importância da tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
-//            return;
-//        }
-//
-//        else {
-//            Tarefa novaTarefa = new Tarefa(
-//                    usuario,
-//                    titulo,
-//                    descricao,
-//                    DataValidator.validarData(dataConclusao),
-//                    jRadioButtonConcluida.isSelected(),
-//                    obterImportanciaSelecionada()
-//            );
-//
-//            tarefaController.cadastrarTarefa(novaTarefa);
-//
-//            JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-//        }}
 
-    public void cadastrarTarefa(String usuario) throws DataInvalidaException, IOException {
-        String titulo = jTextFieldTitulo.getText();
-        String descricao = jTextArea1.getText();
-        String dataConclusao = jFormattedTextFieldData.getText();
-
-        try {
-            validateInput(titulo, descricao, dataConclusao);
-        } catch (DataInvalidaException | IllegalArgumentException e) {
-            JOptionPane.showMessageDialog(this, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+    private void salvarTarefasEmJSON(String usuario) throws Exception {
+        List<Tarefa> tarefas = tarefaPersistence.carregarTarefas(usuario);
 
         Tarefa novaTarefa = new Tarefa(
                 usuario,
-                titulo,
-                descricao,
-                DataValidator.validarData(dataConclusao),
+                jTextFieldTitulo.getText(),
+                jTextArea1.getText(),
+                jFormattedTextFieldData.getText(),
                 jRadioButtonConcluida.isSelected(),
                 obterImportanciaSelecionada()
         );
 
-        tarefaController.cadastrarTarefa(novaTarefa);
+        tarefas.add(novaTarefa);
 
+        tarefaPersistence.salvarTarefas(tarefas, usuario);
+        telaPrincipal.atualizarListaTarefas(tarefas);
         JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
     }
+
 
     private void validateInput(String titulo, String descricao, String dataConclusao)
             throws DataInvalidaException, IllegalArgumentException {
@@ -277,24 +230,6 @@ public class TarefaView extends javax.swing.JFrame {
         }
     }
 
-    private void salvarTarefasEmJSON(String usuario) throws IOException {
-
-        List<Tarefa> tarefasExistente = TarefaRepository.carregarTarefas(usuario);
-
-        Tarefa novaTarefa = new Tarefa(
-                usuario,
-                jTextFieldTitulo.getText(),
-                jTextArea1.getText(),
-                jFormattedTextFieldData.getText(),
-                jRadioButtonConcluida.isSelected(),
-                obterImportanciaSelecionada()
-        );
-
-        tarefasExistente.add(novaTarefa);
-        tarefaPersistence.salvarTarefas(tarefasExistente);
-        telaPrincipal.atualizarListaTarefas(tarefasExistente);
-
-    }
 
     public String obterImportanciaSelecionada() {
         if (jRadioButtonBaixa.isSelected()) {

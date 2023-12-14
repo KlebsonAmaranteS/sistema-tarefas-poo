@@ -218,7 +218,7 @@ public class TelaEditarView extends javax.swing.JFrame {
 
         if (indice != -1) {
             tarefas.set(indice, tarefaEditada);
-            tarefaPersistence.salvarTarefas(tarefas);
+            tarefaPersistence.salvarTarefas(tarefas, usuarioLogado);
 
             return true;
         }

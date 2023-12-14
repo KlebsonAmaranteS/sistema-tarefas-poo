@@ -86,4 +86,3 @@ public class Tarefa {
         return Objects.hash(titulo, descricao);
     }
 }
-

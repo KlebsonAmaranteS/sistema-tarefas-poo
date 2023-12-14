@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="GerenciadorDeTarefas:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="20171799-7ab4-40e3-8ea9-bc07c7554f57" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/GerenciadorDeTarefas_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/GerenciadorDeTarefas_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0b9b0f2c22513cdabb6b6e3b2e2c9fef437ddb2d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e37607f82d0908e5441b2d10b65f78b609f8b57" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/2036a434d0174461dd8dc6fa36801d959e9f1901" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38012d7eb8c84459bf677a2cdf60e9f12a34361e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/51249611d50a6b37fc20551a481512109f6824cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c2ac8788beee916a94bf1ec8755ca655bec4e6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8eb9166081086bd7fe3e5942e9c5da1faf550836" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa0ed3dbac927ebddb0a8ef08a94911a9c0f1e48" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb9c9bae3c54f8c1df6dfd32cbe128d80b65b98e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/b/0b9b0f2c22513cdabb6b6e3b2e2c9fef437ddb2d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/e/1e37607f82d0908e5441b2d10b65f78b609f8b57" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/0/2036a434d0174461dd8dc6fa36801d959e9f1901" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/8/38012d7eb8c84459bf677a2cdf60e9f12a34361e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/1/51249611d50a6b37fc20551a481512109f6824cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/c/7c2ac8788beee916a94bf1ec8755ca655bec4e6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/e/8eb9166081086bd7fe3e5942e9c5da1faf550836" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/a/aa0ed3dbac927ebddb0a8ef08a94911a9c0f1e48" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/b/fb9c9bae3c54f8c1df6dfd32cbe128d80b65b98e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Tarefa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/model/Tarefa.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/model/Tarefa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GerenciadorDeTarefas_jar/GerenciadorDeTarefas.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GerenciadorDeTarefas_jar/tarefas.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GerenciadorDeTarefas_jar/usuarios.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tarefas.json" beforeDir="false" afterPath="$PROJECT_DIR$/tarefas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2Ywcgp0ZGWeC5TIvsrHo6gVPNlL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;modificacoes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/klebs/OneDrive/Documentos/GitHub/sistema-tarefas-poo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\klebs\OneDrive\Documentos\GitHub\sistema-tarefas-poo\GerenciadorDeTarefas\src\main\java" />
+      <recent name="C:\Users\klebs\OneDrive\Documentos\GitHub\sistema-tarefas-poo\GerenciadorDeTarefas\src\main\java\aluno\ifpb\edu\br\gerenciadordetarefas\controller" />
+      <recent name="C:\Users\klebs\OneDrive\Documentos\GitHub\sistema-tarefas-poo\GerenciadorDeTarefas" />
+      <recent name="C:\Users\klebs\OneDrive\Documentos\GitHub\sistema-tarefas-poo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.aluno.ifpb.edu.br.gerenciadordetarefas.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mycompany.gerenciadordetarefas.Main" />
+      <module name="GerenciadorDeTarefas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mycompany.gerenciadordetarefas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="aluno.ifpb.edu.br.gerenciadordetarefas.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="aluno.ifpb.edu.br.gerenciadordetarefas.Main" />
+      <module name="GerenciadorDeTarefas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aluno.ifpb.edu.br.gerenciadordetarefas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GerenciadorDeTarefas.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/GerenciadorDeTarefas_jar/GerenciadorDeTarefas.jar" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.aluno.ifpb.edu.br.gerenciadordetarefas.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JAR Application.GerenciadorDeTarefas.jar" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20171799-7ab4-40e3-8ea9-bc07c7554f57" name="Changes" comment="" />
+      <created>1701440195712</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701440195712</updated>
+      <workItem from="1701440196707" duration="59000" />
+      <workItem from="1701487607972" duration="205000" />
+      <workItem from="1701542996792" duration="1909000" />
+      <workItem from="1701566865738" duration="413000" />
+      <workItem from="1701609363363" duration="1585000" />
+      <workItem from="1701690637422" duration="7388000" />
+      <workItem from="1701698546335" duration="203000" />
+      <workItem from="1701703086425" duration="426000" />
+      <workItem from="1701703605797" duration="1625000" />
+      <workItem from="1701705262660" duration="1250000" />
+      <workItem from="1701706535708" duration="526000" />
+      <workItem from="1701707194709" duration="612000" />
+      <workItem from="1701708132761" duration="750000" />
+      <workItem from="1701722362102" duration="84000" />
+      <workItem from="1701734249186" duration="1264000" />
+      <workItem from="1701736512755" duration="1312000" />
+      <workItem from="1701738054394" duration="329000" />
+      <workItem from="1701827428029" duration="90000" />
+      <workItem from="1701883820275" duration="200000" />
+      <workItem from="1701886520514" duration="217000" />
+      <workItem from="1701886764433" duration="80000" />
+      <workItem from="1701972097507" duration="181000" />
+      <workItem from="1701979801671" duration="90000" />
+      <workItem from="1702139386073" duration="90000" />
+      <workItem from="1702139495146" duration="1481000" />
+      <workItem from="1702141346400" duration="62000" />
+      <workItem from="1702170661347" duration="1376000" />
+      <workItem from="1702217496983" duration="1702000" />
+      <workItem from="1702323571974" duration="936000" />
+      <workItem from="1702332609415" duration="48000" />
+      <workItem from="1702332676494" duration="481000" />
+      <workItem from="1702333209277" duration="1183000" />
+      <workItem from="1702397679260" duration="1496000" />
+      <workItem from="1702399211706" duration="352000" />
+      <workItem from="1702399643641" duration="50000" />
+      <workItem from="1702399701324" duration="2241000" />
+      <workItem from="1702404256685" duration="436000" />
+      <workItem from="1702405426901" duration="2170000" />
+      <workItem from="1702468208918" duration="316000" />
+      <workItem from="1702468556517" duration="2108000" />
+      <workItem from="1702472106221" duration="4904000" />
+      <workItem from="1702477898773" duration="1093000" />
+      <workItem from="1702484442291" duration="1904000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
