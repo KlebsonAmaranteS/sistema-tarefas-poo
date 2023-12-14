@@ -1,0 +1,49 @@
+
+>
+java:S1604"(Make this anonymous inner class a lambda(©ğÊ…
+C
+java:S16040"(Make this anonymous inner class a lambda(ä‘åıÿÿÿÿ
+C
+java:S16049"(Make this anonymous inner class a lambda(²åŞàüÿÿÿÿ
+>
+java:S1604I"(Make this anonymous inner class a lambda(ü»Î
+=
+java:S1604R"(Make this anonymous inner class a lambda(¥Šîj
+o
+java:S1104"YMake usuarioLogado a static final constant or non-public and provide accessors if needed.(ÄË’ì
+I
+java:S1444"3Make this "public static usuarioLogado" field final(ÄË’ì
+œ
+java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§ñÜşûÿÿÿÿ
+—
+java:S1186…"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(å§¸+
+t
+java:S1450Š"XRemove the "blusuario" field and declare it as a local variable in the relevant methods.(ä°âÎüÿÿÿÿ
+s
+java:S1450‹"WRemove the "jButton3" field and declare it as a local variable in the relevant methods.(ĞäğËıÿÿÿÿ
+x
+java:S1450Œ"\Remove the "jButtonEntrar" field and declare it as a local variable in the relevant methods.(Ñ­Äİşÿÿÿÿ
+v
+java:S1450"ZRemove the "jButtonSair" field and declare it as a local variable in the relevant methods.(ëî‰·úÿÿÿÿ
+n
+java:S1450"WRemove the "lblsenha" field and declare it as a local variable in the relevant methods.(ÊƒÄŒ
+H
+java:S1948"2Make "tarefaController" transient or serializable.(‡ï’î
+H
+java:S1948"2Make "tarefaRepository" transient or serializable.(çÆ‰
+E
+java:S1948"/Make "tarefaService" transient or serializable.(âµÄ±
+U
+java:S1161[":Add the "@Override" annotation above this method signature(óÚ°ùÿÿÿÿ
+E
+java:S1172h"*Remove this unused method parameter "evt".(§ñÜşûÿÿÿÿ
+E
+java:S1172l"*Remove this unused method parameter "evt".(©¼úşüÿÿÿÿ
+L
+java:S2696q"6Make the enclosing method "static" or remove this set.(ÜÖƒ·
+E
+java:S1172z"*Remove this unused method parameter "evt".(½êéşıÿÿÿÿ
+A
+java:S1172"*Remove this unused method parameter "evt".(Œ¹×Å
+@
+java:S1172…"*Remove this unused method parameter "evt".(å§¸+
