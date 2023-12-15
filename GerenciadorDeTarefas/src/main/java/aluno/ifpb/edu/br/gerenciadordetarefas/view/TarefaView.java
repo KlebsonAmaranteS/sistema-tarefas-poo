@@ -8,10 +8,8 @@ import aluno.ifpb.edu.br.gerenciadordetarefas.model.Tarefa;
 import aluno.ifpb.edu.br.gerenciadordetarefas.model.TarefaService;
 
 import javax.swing.*;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import static aluno.ifpb.edu.br.gerenciadordetarefas.view.TelaLoginView.usuarioLogado;
 
@@ -163,20 +161,22 @@ public class TarefaView extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
+        telaPrincipal.setVisible(true);
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         try {
-            // Validação dos campos
             String titulo = jTextFieldTitulo.getText();
             String descricao = jTextArea1.getText();
             String dataConclusao = jFormattedTextFieldData.getText();
 
             validateInput(titulo, descricao, dataConclusao);
-
             salvarTarefasEmJSON(usuarioLogado);
-            telaPrincipal.atualizarListaTarefas(tarefas);
+            telaPrincipal.listarTarefas();
             this.dispose();
+            telaPrincipal.setVisible(true);
+
+
         } catch (IllegalArgumentException e) {
             JOptionPane.showMessageDialog(this, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         } catch (Exception e) {

@@ -75,10 +75,16 @@ public class Tarefa {
 
     @Override
     public String toString() {
-        return String.format("%s - %s (Conclusão em: %s) - Prioridade: %s - Status: %s",
+        return String.format("Título: %s - Descrição: %s - (Conclusão em: %s) - Prioridade: %s - Status: %s",
                 getTitulo(), getDescricao(), getDataConclusao(),
-                getImportancia(), isConcluida());
+                getImportancia(), getStatusTarefa(isConcluida()));
     }
+
+
+    public String getStatusTarefa(boolean concluida) {
+        return concluida ? "Concluída" : "Não Concluída";
+    }
+
 
 
     @Override

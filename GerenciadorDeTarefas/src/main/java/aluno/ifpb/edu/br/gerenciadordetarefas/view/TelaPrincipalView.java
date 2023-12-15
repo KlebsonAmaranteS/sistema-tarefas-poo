@@ -121,7 +121,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
 
         jButton2.setText("Buscar");
 
-        jButtonRemoverTarefa1.setText("Listar/Atualizar Tarefas");
+        jButtonRemoverTarefa1.setText("Listar Tarefas");
         jButtonRemoverTarefa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 try {
@@ -190,7 +190,11 @@ public class TelaPrincipalView extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        System.exit(0);
+        int opcao = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja sair?", "Confirmação", JOptionPane.YES_NO_OPTION);
+
+        if (opcao == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
     }
 
 
@@ -239,26 +243,26 @@ public class TelaPrincipalView extends javax.swing.JFrame {
         if (selectedIndex != -1) {
             Tarefa selectedTask = obterTarefaSelecionada(selectedIndex);
 
-            int opcao = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja remover a tarefa?", "Confirmação", JOptionPane.YES_NO_OPTION);
+            if (selectedTask != null) {
+                int opcao = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja remover a tarefa?", "Confirmação", JOptionPane.YES_NO_OPTION);
 
-            if (opcao == JOptionPane.YES_OPTION) {
-                ListModel<Tarefa> model = jList1.getModel();
+                if (opcao == JOptionPane.YES_OPTION) {
+                    DefaultListModel<Tarefa> model = (DefaultListModel<Tarefa>) jList1.getModel();
 
-                if (selectedIndex < model.getSize()) {
-                    if (model instanceof DefaultListModel) {
-                        DefaultListModel<Tarefa> defaultListModel = (DefaultListModel<Tarefa>) model;
-
-                        defaultListModel.remove(selectedIndex);
-                        tarefaController.removerTarefa(usuarioLogado, selectedTask.getTitulo());
-                        tarefas.remove(selectedTask);
-                        listarTarefas();
-                    } else {
-                        JOptionPane.showMessageDialog(frame, "Não foi possível remover a tarefa");
+                    if (selectedIndex < model.getSize()) {
+                        model.remove(selectedIndex); // Remove da lista gráfica
+                        tarefaController.removerTarefa(usuarioLogado, selectedTask.getTitulo()); // Remove do banco ou do serviço
+                        tarefas.remove(selectedTask); // Remove da lista local
                     }
                 }
+            } else {
+                JOptionPane.showMessageDialog(frame, "Nenhuma tarefa selecionada para remover.");
             }
+        } else {
+            JOptionPane.showMessageDialog(frame, "Nenhuma tarefa disponível para remover.");
         }
     }
+
 
 
     private void jTextFieldBuscarTarefaActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
@@ -271,7 +275,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
             }
         });
 
-        jButtonRemoverTarefa1.setText("Listar/Atualizar Tarefas");
+        jButtonRemoverTarefa1.setText("Listar Tarefas");
         jButtonRemoverTarefa1.addActionListener(new java.awt.event.ActionListener() {
 
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -303,22 +307,28 @@ public class TelaPrincipalView extends javax.swing.JFrame {
 
     private void jButtonCriarTarefaActionPerformed(java.awt.event.ActionEvent evt) {
         TarefaView telaCadastro = new TarefaView(tarefaController);
+        dispose();
         telaCadastro.setVisible(true);
+
     }
 
     private void jButtonListarTarefa1ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
         listarTarefas();
     }
 
-    private void listarTarefas() {
+    void listarTarefas() {
         List<Tarefa> tarefas = TarefaRepository.carregarTarefas(usuarioLogado);
 
-        if (tarefas != null) {
+        if (tarefas != null && !tarefas.isEmpty()) {
             atualizarListaTarefas(tarefas);
         } else {
-            JOptionPane.showMessageDialog(frame, "Nenhuma tarefa para listar");
+            JOptionPane.showMessageDialog(frame, "Nenhuma tarefa para listar", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+
         }
     }
+
+
+
 
     void atualizarListaTarefas(List<Tarefa> tarefas) {
         SwingUtilities.invokeLater(() -> {
