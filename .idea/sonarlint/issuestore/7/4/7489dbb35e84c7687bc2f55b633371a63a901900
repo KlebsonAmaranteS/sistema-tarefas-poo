@@ -6,18 +6,19 @@ java:S1604-"(Make this anonymous inner class a lambda(’ñÕìÿÿÿÿÿ
 >
 java:S16046"(Make this anonymous inner class a lambda(Ô¡Ñ’
 s
-java:S1450i"XRemove the "blusuario" field and declare it as a local variable in the relevant methods.(ä°âÎüÿÿÿÿ
+java:S1450y"XRemove the "blusuario" field and declare it as a local variable in the relevant methods.(ä°âÎüÿÿÿÿ
 u
-java:S1450g"_Remove the "jButtonCadastrar" field and declare it as a local variable in the relevant methods.(”¤Û¾
+java:S1450w"_Remove the "jButtonCadastrar" field and declare it as a local variable in the relevant methods.(”¤Û¾
 w
-java:S1450h"\Remove the "jButtonVoltar" field and declare it as a local variable in the relevant methods.(åæ´Ìıÿÿÿÿ
+java:S1450x"\Remove the "jButtonVoltar" field and declare it as a local variable in the relevant methods.(åæ´Ìıÿÿÿÿ
 m
-java:S1450j"WRemove the "lblsenha" field and declare it as a local variable in the relevant methods.(ÊƒÄŒ
+java:S1450z"WRemove the "lblsenha" field and declare it as a local variable in the relevant methods.(ÊƒÄŒ
 U
 java:S1161?":Add the "@Override" annotation above this method signature(óÚ°ùÿÿÿÿ
-@
-java:S1172K"*Remove this unused method parameter "evt".(Ôÿè™
-E
-java:S1172W"*Remove this unused method parameter "evt".(ôÏßòøÿÿÿÿ
-@
-java:S1172]"*Remove this unused method parameter "evt".(˜³™•
+G
+java:S1172W"*Remove this unused method parameter "evt".(Ôÿè™8ˆ÷äÇ1
+X	java:S125K"<This block of commented-out lines of code should be removed.(ˆïÜ8èÜäÇ1
+L
+java:S1172g"*Remove this unused method parameter "evt".(ôÏßòøÿÿÿÿ8—÷äÇ1
+G
+java:S1172m"*Remove this unused method parameter "evt".(˜³™•8š÷äÇ1

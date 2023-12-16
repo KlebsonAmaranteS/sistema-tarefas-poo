@@ -200,7 +200,6 @@ public class TelaEditarView extends javax.swing.JFrame {
         if (editarTarefa(tarefaParaEditar, tarefaEditada)) {
             JOptionPane.showMessageDialog(this, "Tarefa editada com sucesso!");
             dispose();
-            telaPrincipal.atualizarListaTarefas(Objects.requireNonNull(TarefaRepository.carregarTarefas(usuarioLogado)));
         } else {
             JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
         }

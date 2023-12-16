@@ -271,7 +271,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
             }
         });
 
-        jButtonRemoverTarefa1.setText("Listar/Atualizar Tarefas");
+        jButtonRemoverTarefa1.setText("Atualizar Tarefas");
         jButtonRemoverTarefa1.addActionListener(new java.awt.event.ActionListener() {
 
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -320,7 +320,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
         }
     }
 
-    void atualizarListaTarefas(List<Tarefa> tarefas) {
+    public void atualizarListaTarefas(List<Tarefa> tarefas) {
         SwingUtilities.invokeLater(() -> {
             DefaultListModel<Tarefa> model = new DefaultListModel<>();
             for (Tarefa tarefa : tarefas) {
@@ -329,6 +329,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
             jList1.setModel(model);
         });
     }
+
 
 
     private javax.swing.JButton jButton1;

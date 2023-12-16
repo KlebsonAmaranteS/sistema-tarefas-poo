@@ -16,14 +16,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0b9b0f2c22513cdabb6b6e3b2e2c9fef437ddb2d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0b9b0f2c22513cdabb6b6e3b2e2c9fef437ddb2d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e37607f82d0908e5441b2d10b65f78b609f8b57" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e37607f82d0908e5441b2d10b65f78b609f8b57" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/2036a434d0174461dd8dc6fa36801d959e9f1901" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/2036a434d0174461dd8dc6fa36801d959e9f1901" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/25a8c1565dc6ef8f84a386284e310f379c894316" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/25a8c1565dc6ef8f84a386284e310f379c894316" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/26dcd4fb55ccfac82f651f829dea8b4f53bc2340" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e2e7ac70994d9a2b13d602606d8f9884f2dd91d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38012d7eb8c84459bf677a2cdf60e9f12a34361e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38012d7eb8c84459bf677a2cdf60e9f12a34361e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/412afb1fbf1e44102d2378e792f61e1e0f117c31" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/412afb1fbf1e44102d2378e792f61e1e0f117c31" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/5/4557ed68a0c2730962c1a096bce18ffdb91c73c2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/5/4557ed68a0c2730962c1a096bce18ffdb91c73c2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/51249611d50a6b37fc20551a481512109f6824cd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58fb9ac3382593311507d5dd27b5b33acb7a09b8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c2ac8788beee916a94bf1ec8755ca655bec4e6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c2ac8788beee916a94bf1ec8755ca655bec4e6b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c2ac8788beee916a94bf1ec8755ca655bec4e6b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8eb9166081086bd7fe3e5942e9c5da1faf550836" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8eb9166081086bd7fe3e5942e9c5da1faf550836" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/968ec0b083191646d77a45d4f173c7855810096b" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fdc1cd573dd7fe34fba178c4e83b23fb10e31c2" beforeDir="false" />
@@ -32,10 +32,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb9c9bae3c54f8c1df6dfd32cbe128d80b65b98e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb9c9bae3c54f8c1df6dfd32cbe128d80b65b98e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/6/26dcd4fb55ccfac82f651f829dea8b4f53bc2340" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/e/2e2e7ac70994d9a2b13d602606d8f9884f2dd91d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/1/51249611d50a6b37fc20551a481512109f6824cd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/8/58fb9ac3382593311507d5dd27b5b33acb7a09b8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/c/7c2ac8788beee916a94bf1ec8755ca655bec4e6b" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/6/968ec0b083191646d77a45d4f173c7855810096b" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/f/9fdc1cd573dd7fe34fba178c4e83b23fb10e31c2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/1/e1d98c57258cc4010a2d575eff60a8c2fc335f6e" beforeDir="false" />
@@ -49,7 +47,6 @@
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/TarefaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/TarefaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaCadastroView.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaCadastroView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaEditarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaEditarView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/Main.class" afterDir="false" />
@@ -254,8 +251,8 @@
       <workItem from="1702582222940" duration="239000" />
       <workItem from="1702615999830" duration="327000" />
       <workItem from="1702644818049" duration="186000" />
-      <workItem from="1702657587075" duration="82000" />
-      <workItem from="1702689672437" duration="346000" />
+      <workItem from="1702645249488" duration="4900000" />
+      <workItem from="1702650525233" duration="1282000" />
     </task>
     <servers />
   </component>

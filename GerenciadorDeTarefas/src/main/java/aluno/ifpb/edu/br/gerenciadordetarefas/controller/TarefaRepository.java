@@ -8,10 +8,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class TarefaRepository {
-    private static final String CAMINHO_ARQUIVO_JSON = "tarefas.json";
 
     public static List<Tarefa> carregarTarefas(String usuario) {
         try (FileReader reader = new FileReader(getCaminhoArquivo(usuario))) {
