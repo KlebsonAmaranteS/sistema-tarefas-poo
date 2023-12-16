@@ -72,17 +72,33 @@ public class TelaCadastroView extends javax.swing.JFrame {
     }
 
 
+//    private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
+//        String usuario = jTextFieldCriarUsuario.getText();
+//        String senha = new String(jPasswordFieldCriarSenha.getPassword());
+//
+//        UsuarioController.cadastrarUsuario(usuario, senha);
+//
+//        JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
+//
+//        jTextFieldCriarUsuario.setText("");
+//        jPasswordFieldCriarSenha.setText("");
+//    }
+
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
         String usuario = jTextFieldCriarUsuario.getText();
         String senha = new String(jPasswordFieldCriarSenha.getPassword());
 
-        UsuarioController.cadastrarUsuario(usuario, senha);
+        boolean cadastroBemSucedido = UsuarioController.cadastrarUsuario(usuario, senha);
 
-        JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
-
-        jTextFieldCriarUsuario.setText("");
-        jPasswordFieldCriarSenha.setText("");
+        if (cadastroBemSucedido) {
+            JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
+            jTextFieldCriarUsuario.setText("");
+            jPasswordFieldCriarSenha.setText("");
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuário já cadastrado. Escolha outro nome de usuário.");
+        }
     }
+
 
     private void jTextFieldCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {
         throw new UnsupportedOperationException("Ação não implementada.");
