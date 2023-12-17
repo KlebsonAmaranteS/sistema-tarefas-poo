@@ -164,6 +164,7 @@ public class TarefaView extends javax.swing.JFrame {
         telaPrincipal.setVisible(true);
     }
 
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             String titulo = jTextFieldTitulo.getText();
@@ -176,11 +177,12 @@ public class TarefaView extends javax.swing.JFrame {
             this.dispose();
             telaPrincipal.setVisible(true);
 
-
         } catch (IllegalArgumentException e) {
             JOptionPane.showMessageDialog(this, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
-        } catch (Exception e) {
+        } catch (DataInvalidaException e) {
             JOptionPane.showMessageDialog(this, "Formato de data inválido. Por favor, insira uma data válida.", "Erro", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Erro ao processar a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 

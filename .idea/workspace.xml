@@ -9,110 +9,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0025d8fb-931a-4e95-a45e-59c2ac462801" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/sistema_tarefas_poo_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tarefas_brenda.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/GerenciadorDeTarefas_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc-klebson-note.xml" beforeDir="false" />
+    <list default="true" id="944b4f98-891a-4c83-95d6-3f7d0fbf42d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRemoverException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/sistema_tarefas_poo_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/sistema_tarefas_poo_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0b9b0f2c22513cdabb6b6e3b2e2c9fef437ddb2d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0b9b0f2c22513cdabb6b6e3b2e2c9fef437ddb2d-klebson-note" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e37607f82d0908e5441b2d10b65f78b609f8b57" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e37607f82d0908e5441b2d10b65f78b609f8b57-Klebson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e37607f82d0908e5441b2d10b65f78b609f8b57-klebson-note" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/2036a434d0174461dd8dc6fa36801d959e9f1901" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/2036a434d0174461dd8dc6fa36801d959e9f1901-klebson-note" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/25a8c1565dc6ef8f84a386284e310f379c894316" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/26dcd4fb55ccfac82f651f829dea8b4f53bc2340" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e2e7ac70994d9a2b13d602606d8f9884f2dd91d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e8cf92205ec303e7304888d382cb6a8cf5f56ba" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38012d7eb8c84459bf677a2cdf60e9f12a34361e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38012d7eb8c84459bf677a2cdf60e9f12a34361e-klebson-note" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/412afb1fbf1e44102d2378e792f61e1e0f117c31" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/5/4557ed68a0c2730962c1a096bce18ffdb91c73c2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/5/4557ed68a0c2730962c1a096bce18ffdb91c73c2-Klebson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/5/4557ed68a0c2730962c1a096bce18ffdb91c73c2-klebson-note" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/51249611d50a6b37fc20551a481512109f6824cd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58fb9ac3382593311507d5dd27b5b33acb7a09b8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/7489dbb35e84c7687bc2f55b633371a63a901900" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c2ac8788beee916a94bf1ec8755ca655bec4e6b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8eb9166081086bd7fe3e5942e9c5da1faf550836" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8eb9166081086bd7fe3e5942e9c5da1faf550836-klebson-note" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/968ec0b083191646d77a45d4f173c7855810096b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fdc1cd573dd7fe34fba178c4e83b23fb10e31c2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa0ed3dbac927ebddb0a8ef08a94911a9c0f1e48" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa0ed3dbac927ebddb0a8ef08a94911a9c0f1e48-klebson-note" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e1d98c57258cc4010a2d575eff60a8c2fc335f6e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb9c9bae3c54f8c1df6dfd32cbe128d80b65b98e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb9c9bae3c54f8c1df6dfd32cbe128d80b65b98e-Klebson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb9c9bae3c54f8c1df6dfd32cbe128d80b65b98e-klebson-note" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index-Klebson.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index-klebson-note-2.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index-klebson-note.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/b/0b9b0f2c22513cdabb6b6e3b2e2c9fef437ddb2d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/e/1e37607f82d0908e5441b2d10b65f78b609f8b57" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/0/2036a434d0174461dd8dc6fa36801d959e9f1901" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/5/25a8c1565dc6ef8f84a386284e310f379c894316" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/6/26dcd4fb55ccfac82f651f829dea8b4f53bc2340" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/e/2e2e7ac70994d9a2b13d602606d8f9884f2dd91d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/e/2e8cf92205ec303e7304888d382cb6a8cf5f56ba" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/8/38012d7eb8c84459bf677a2cdf60e9f12a34361e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/1/412afb1fbf1e44102d2378e792f61e1e0f117c31" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/5/4557ed68a0c2730962c1a096bce18ffdb91c73c2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/1/51249611d50a6b37fc20551a481512109f6824cd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/8/58fb9ac3382593311507d5dd27b5b33acb7a09b8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/4/7489dbb35e84c7687bc2f55b633371a63a901900" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/c/7c2ac8788beee916a94bf1ec8755ca655bec4e6b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/e/8eb9166081086bd7fe3e5942e9c5da1faf550836" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/6/968ec0b083191646d77a45d4f173c7855810096b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/f/9fdc1cd573dd7fe34fba178c4e83b23fb10e31c2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/a/aa0ed3dbac927ebddb0a8ef08a94911a9c0f1e48" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/1/e1d98c57258cc4010a2d575eff60a8c2fc335f6e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/b/fb9c9bae3c54f8c1df6dfd32cbe128d80b65b98e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index-Klebson.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index-klebson-note-2.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index-klebson-note.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace-Klebson.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace-klebson-note-2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace-klebson-note.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sistema-tarefas-poo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sistema-tarefas-poo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/GerenciadorDeTarefas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/GerenciadorDeTarefas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/UsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Tarefa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/TarefaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/TarefaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaCadastroView.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaCadastroView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaEditarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaEditarView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository$1-klebson-note.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository-klebson-note.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/model/Tarefa-Klebson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/controller/UsuarioController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/model/Tarefa.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/model/Tarefa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$1-Klebson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView-klebson-note.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/model/TarefaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/model/TarefaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/model/Usuario.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$10-Klebson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaCadastroView.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaCadastroView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaEditarView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaEditarView$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaEditarView.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaEditarView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$11-Klebson.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$2-Klebson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$3-Klebson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$4-Klebson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$5-Klebson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$6-Klebson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$7-Klebson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$8-Klebson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$9-Klebson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView-Klebson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView.class" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciadorDeTarefas/target/classes/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sistema_tarefas_poo_jar/sistema-tarefas-poo.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tarefas_klebson.json" beforeDir="false" afterPath="$PROJECT_DIR$/tarefas_klebson.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tarefas_tomaz.json" beforeDir="false" afterPath="$PROJECT_DIR$/tarefas_tomaz.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,20 +62,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
-  <component name="ProjectId" id="2Za0rC4kVDeelwaImQDboQqAIsF" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2ZbUOxLi9VdbTdszoBdlbnC4eol" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "modificacoes",
     "node.js.detected.package.eslint": "true",
@@ -145,7 +85,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -172,12 +112,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0025d8fb-931a-4e95-a45e-59c2ac462801" name="Changes" comment="" />
-      <created>1702645081992</created>
+      <changelist id="944b4f98-891a-4c83-95d6-3f7d0fbf42d1" name="Changes" comment="" />
+      <created>1702690244020</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1702645081992</updated>
-      <workItem from="1702645085473" duration="7964000" />
+      <updated>1702690244020</updated>
+      <workItem from="1702690254281" duration="238000" />
+      <workItem from="1702735846821" duration="1344000" />
     </task>
     <servers />
   </component>

@@ -62,9 +62,10 @@ public class Tarefa {
         this.dataConclusao = dataConclusao;
     }
 
-    public boolean setStatus(boolean concluída) {
+    public boolean setStatus(boolean concluida) {
         return concluida;
     }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
