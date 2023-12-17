@@ -76,7 +76,11 @@ public class Tarefa {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return String.format("Título: %s - Descrição: %s - (Conclusão em: %s) - Prioridade: %s - Status: %s",
+=======
+        return String.format("Descrição: %s - Titulo: %s - (Conclusão em: %s) - Prioridade: %s - Status: %s",
+>>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
                 getTitulo(), getDescricao(), getDataConclusao(),
                 getImportancia(), getStatusTarefa(isConcluida()));
     }
@@ -86,8 +90,11 @@ public class Tarefa {
         return concluida ? "Concluída" : "Não Concluída";
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
     @Override
     public int hashCode() {
         return Objects.hash(titulo, descricao);

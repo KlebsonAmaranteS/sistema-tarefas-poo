@@ -309,6 +309,45 @@ public class TelaPrincipalView extends javax.swing.JFrame {
 
 
     private void jTextFieldBuscarTarefaActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
+<<<<<<< HEAD
+=======
+        String termoBusca = jTextFieldBuscarTarefa.getText();
+        jButton2.setText("Buscar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButtonRemoverTarefa1.setText("Atualizar Tarefas");
+        jButtonRemoverTarefa1.addActionListener(new java.awt.event.ActionListener() {
+
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                try {
+                    jButtonListarTarefa1ActionPerformed(evt);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+
+        if (termoBusca != null && !termoBusca.isEmpty()) {
+            List<Tarefa> tarefas = TarefaRepository.carregarTarefas(usuarioLogado);
+
+            if (tarefas != null) {
+                DefaultListModel<Tarefa> model = new DefaultListModel<>();
+                for (Tarefa tarefa : tarefas) {
+                    if (tarefa.getDescricao().contains(termoBusca) || tarefa.getTitulo().contains(termoBusca)) {
+                        model.addElement(tarefa);
+                    }
+                }
+                jList1.setModel(model);
+            } else {
+                JOptionPane.showMessageDialog(frame, "Nenhuma tarefa foi encontrada");
+            }
+        }
+>>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
     }
 
 
@@ -341,7 +380,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
         }
     }
 
-    void atualizarListaTarefas(List<Tarefa> tarefas) {
+    public void atualizarListaTarefas(List<Tarefa> tarefas) {
         SwingUtilities.invokeLater(() -> {
             DefaultListModel<Tarefa> model = new DefaultListModel<>();
             for (Tarefa tarefa : tarefas) {
@@ -350,6 +389,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
             jList1.setModel(model);
         });
     }
+
 
 
     private javax.swing.JButton jButton1;

@@ -1,0 +1,78 @@
+
+`	java:S112$"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112^"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112i"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112s"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112‚"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112ç"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112™"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+C
+java:S1604K"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ
+>
+java:S1604R"(Make this anonymous inner class a lambda(áÁá
+>
+java:S1604Y"(Make this anonymous inner class a lambda(›®Êß
+C
+java:S1604d"(Make this anonymous inner class a lambda(şÌ£Şÿÿÿÿÿ
+C
+java:S1604n"(Make this anonymous inner class a lambda(æ‹Êğûÿÿÿÿ
+C
+java:S1604}"(Make this anonymous inner class a lambda(ùóŸÜùÿÿÿÿ
+?
+java:S1604‡"(Make this anonymous inner class a lambda(ÿóÎ×
+?
+java:S1604‹"(Make this anonymous inner class a lambda(ÿóÎ×
+D
+java:S1604“"(Make this anonymous inner class a lambda(ùóŸÜùÿÿÿÿ
+a
+java:S2259ü"JA "NullPointerException" could be thrown; "selectedTask" is nullable here.(Û·
+n
+java:S1450Ï"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶
+}
+java:S1450Ñ"aRemove the "jButtonCriarTarefa" field and declare it as a local variable in the relevant methods.(Õ•®‡ıÿÿÿÿ
+y
+java:S1450Ò"bRemove the "jButtonEditarTarefa" field and declare it as a local variable in the relevant methods.(¾’Ü¬
+z
+java:S1450Ó"cRemove the "jButtonRemoverTarefa" field and declare it as a local variable in the relevant methods.(´øŸ¹
+r
+java:S1450Õ"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ
+w
+java:S1450×"[Remove the "jScrollPane2" field and declare it as a local variable in the relevant methods.(ŠÌ«·şÿÿÿÿ
+H
+java:S1948"2Make "tarefaController" transient or serializable.(‡ï’î
+H
+java:S1948"2Make "tarefaRepository" transient or serializable.(çÆ‰
+E
+java:S1948"/Make "tarefaService" transient or serializable.(âµÄ±
+?
+java:S1948")Make "tarefas" transient or serializable.(åŸ’¨
+D
+java:S1948>")Make "strings" transient or serializable.(¼äœ÷ùÿÿÿÿ
+F
+java:S1172À"*Remove this unused method parameter "evt".(‘ òôøÿÿÿÿ
+ƒ
+java:S1130Å"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(òÁ—Î
+A
+java:S1172Å"*Remove this unused method parameter "evt".(òÁ—Î
+ƒ
+java:S1130ì"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ÿá¾ˆ
+A
+java:S1172ì"*Remove this unused method parameter "evt".(ÿá¾ˆ
+ˆ
+java:S1130ˆ"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(Ù‚Ÿıÿÿÿÿ
+F
+java:S1172ˆ"*Remove this unused method parameter "evt".(Ù‚Ÿıÿÿÿÿ
+R
+java:S1117Ÿ";Rename "tarefas" which hides the field declared at line 20.(†œ‹Ğ
+F
+java:S1172°"*Remove this unused method parameter "evt".(ğƒøÿÿÿÿ
+ƒ
+java:S1130µ"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¯—Öò
+A
+java:S1172µ"*Remove this unused method parameter "evt".(¯—Öò
+R
+java:S1117º";Rename "tarefas" which hides the field declared at line 20.(†œ‹Ğ
+J
+java:S1068"4Remove this unused "tarefaRepository" private field.(çÆ‰
+G
+java:S1068"1Remove this unused "tarefaService" private field.(âµÄ±

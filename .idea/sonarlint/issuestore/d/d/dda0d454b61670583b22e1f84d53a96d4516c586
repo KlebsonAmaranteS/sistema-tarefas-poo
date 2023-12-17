@@ -31,6 +31,8 @@ H
 java:S1948"2Make "tarefaController" transient or serializable.(‡ï’î
 H
 java:S1948"2Make "tarefaRepository" transient or serializable.(çÆ‰
+E
+java:S1948"/Make "tarefaService" transient or serializable.(âµÄ±
 U
 java:S1161[":Add the "@Override" annotation above this method signature(óÚ°ùÿÿÿÿ
 E

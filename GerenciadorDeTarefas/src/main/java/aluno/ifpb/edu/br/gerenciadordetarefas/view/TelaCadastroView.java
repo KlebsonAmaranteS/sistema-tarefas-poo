@@ -72,6 +72,18 @@ public class TelaCadastroView extends javax.swing.JFrame {
     }
 
 
+//    private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
+//        String usuario = jTextFieldCriarUsuario.getText();
+//        String senha = new String(jPasswordFieldCriarSenha.getPassword());
+//
+//        UsuarioController.cadastrarUsuario(usuario, senha);
+//
+//        JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
+//
+//        jTextFieldCriarUsuario.setText("");
+//        jPasswordFieldCriarSenha.setText("");
+//    }
+
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
         String usuario = jTextFieldCriarUsuario.getText();
         String senha = new String(jPasswordFieldCriarSenha.getPassword());
@@ -88,7 +100,10 @@ public class TelaCadastroView extends javax.swing.JFrame {
     }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
     private void jTextFieldCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {
         throw new UnsupportedOperationException("Ação não implementada.");
     }
