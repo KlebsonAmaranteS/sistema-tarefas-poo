@@ -7,6 +7,7 @@ import aluno.ifpb.edu.br.gerenciadordetarefas.model.Tarefa;
 import aluno.ifpb.edu.br.gerenciadordetarefas.model.TarefaService;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +50,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
         jButtonEditarTarefa = new javax.swing.JButton();
         jButtonRemoverTarefa = new javax.swing.JButton();
         jTextFieldBuscarTarefa = new javax.swing.JTextField();
+        jButtonBuscar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButtonRemoverTarefa1 = new javax.swing.JButton();
@@ -56,6 +58,16 @@ public class TelaPrincipalView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
         setResizable(false);
+
+
+        jButtonBuscar.setText("Buscar");
+        jButtonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarActionPerformed(evt);
+            }
+        });
+
+
 
         jList1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jList1.setModel(new AbstractListModel<Tarefa>() {
@@ -117,11 +129,17 @@ public class TelaPrincipalView extends javax.swing.JFrame {
             }
         });
 
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         jLabel1.setText("Buscar Tarefa");
 
         jButton2.setText("Buscar");
 
-        jButtonRemoverTarefa1.setText("Listar/Atualizar Tarefas");
+        jButtonRemoverTarefa1.setText("Listar Tarefas");
         jButtonRemoverTarefa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 try {
@@ -190,7 +208,35 @@ public class TelaPrincipalView extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        System.exit(0);
+        int opcao = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja sair?", "Confirmação", JOptionPane.YES_NO_OPTION);
+
+        if (opcao == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }
+
+    private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {
+        try {
+            buscarTarefa();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void buscarTarefa() {
+        String termoBusca = jTextFieldBuscarTarefa.getText();
+
+        if (termoBusca != null && !termoBusca.isEmpty()) {
+            List<Tarefa> tarefas = TarefaRepository.carregarTarefas(usuarioLogado);
+
+            DefaultListModel<Tarefa> model = new DefaultListModel<>();
+            for (Tarefa tarefa : tarefas) {
+                if (tarefa.getDescricao().contains(termoBusca) || tarefa.getTitulo().contains(termoBusca)) {
+                    model.addElement(tarefa);
+                }
+            }
+            jList1.setModel(model);
+        }
     }
 
 
@@ -224,12 +270,13 @@ public class TelaPrincipalView extends javax.swing.JFrame {
 
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        try {
-            jTextFieldBuscarTarefaActionPerformed(evt);
-            listarTarefas();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        SwingUtilities.invokeLater(() -> {
+            try {
+                buscarTarefa();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
 
@@ -239,29 +286,31 @@ public class TelaPrincipalView extends javax.swing.JFrame {
         if (selectedIndex != -1) {
             Tarefa selectedTask = obterTarefaSelecionada(selectedIndex);
 
-            int opcao = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja remover a tarefa?", "Confirmação", JOptionPane.YES_NO_OPTION);
+            if (selectedTask != null) {
+                int opcao = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja remover a tarefa?", "Confirmação", JOptionPane.YES_NO_OPTION);
 
-            if (opcao == JOptionPane.YES_OPTION) {
-                ListModel<Tarefa> model = jList1.getModel();
+                if (opcao == JOptionPane.YES_OPTION) {
+                    DefaultListModel<Tarefa> model = (DefaultListModel<Tarefa>) jList1.getModel();
 
-                if (selectedIndex < model.getSize()) {
-                    if (model instanceof DefaultListModel) {
-                        DefaultListModel<Tarefa> defaultListModel = (DefaultListModel<Tarefa>) model;
-
-                        defaultListModel.remove(selectedIndex);
+                    if (selectedIndex < model.getSize()) {
+                        model.remove(selectedIndex);
                         tarefaController.removerTarefa(usuarioLogado, selectedTask.getTitulo());
                         tarefas.remove(selectedTask);
-                        listarTarefas();
-                    } else {
-                        JOptionPane.showMessageDialog(frame, "Não foi possível remover a tarefa");
                     }
                 }
+            } else {
+                JOptionPane.showMessageDialog(frame, "Nenhuma tarefa selecionada para remover.");
             }
+        } else {
+            JOptionPane.showMessageDialog(frame, "Nenhuma tarefa disponível para remover.");
         }
     }
 
 
+
     private void jTextFieldBuscarTarefaActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
+<<<<<<< HEAD
+=======
         String termoBusca = jTextFieldBuscarTarefa.getText();
         jButton2.setText("Buscar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -298,25 +347,36 @@ public class TelaPrincipalView extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(frame, "Nenhuma tarefa foi encontrada");
             }
         }
+>>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
     }
+
 
 
     private void jButtonCriarTarefaActionPerformed(java.awt.event.ActionEvent evt) {
         TarefaView telaCadastro = new TarefaView(tarefaController);
+        dispose();
         telaCadastro.setVisible(true);
+
     }
 
     private void jButtonListarTarefa1ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
-        listarTarefas();
+        try{
+            listarTarefas();
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(frame, "Nenhuma tarefa para listar");
+        }
+
     }
 
-    private void listarTarefas() {
+    void listarTarefas() {
         List<Tarefa> tarefas = TarefaRepository.carregarTarefas(usuarioLogado);
 
-        if (tarefas != null) {
-            atualizarListaTarefas(tarefas);
-        } else {
-            JOptionPane.showMessageDialog(frame, "Nenhuma tarefa para listar");
+        try {
+            if (tarefas != null && !tarefas.isEmpty()) {
+                atualizarListaTarefas(tarefas);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 
@@ -343,5 +403,6 @@ public class TelaPrincipalView extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextFieldBuscarTarefa;
 
+    private javax.swing.JButton jButtonBuscar;
 }
 

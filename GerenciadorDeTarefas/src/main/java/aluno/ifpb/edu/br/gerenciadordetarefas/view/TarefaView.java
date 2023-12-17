@@ -7,7 +7,10 @@ import aluno.ifpb.edu.br.gerenciadordetarefas.model.TarefaService;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
+<<<<<<< HEAD
+=======
 import java.util.Objects;
+>>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
 
 import static aluno.ifpb.edu.br.gerenciadordetarefas.view.TelaLoginView.usuarioLogado;
 
@@ -166,7 +169,9 @@ public class TarefaView extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
+        telaPrincipal.setVisible(true);
     }
+
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         try {
@@ -175,14 +180,17 @@ public class TarefaView extends javax.swing.JFrame {
             String dataConclusao = jFormattedTextFieldData.getText();
 
             validateInput(titulo, descricao, dataConclusao);
-
             salvarTarefasEmJSON(usuarioLogado);
-            telaPrincipal.atualizarListaTarefas(tarefas);
+            telaPrincipal.listarTarefas();
             this.dispose();
+            telaPrincipal.setVisible(true);
+
         } catch (IllegalArgumentException e) {
             JOptionPane.showMessageDialog(this, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
-        } catch (Exception e) {
+        } catch (DataInvalidaException e) {
             JOptionPane.showMessageDialog(this, "Formato de data inválido. Por favor, insira uma data válida.", "Erro", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Erro ao processar a tarefa.", "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 

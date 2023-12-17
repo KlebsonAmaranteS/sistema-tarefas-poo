@@ -1,13 +1,25 @@
 package aluno.ifpb.edu.br.gerenciadordetarefas.controller;
 
+import aluno.ifpb.edu.br.gerenciadordetarefas.model.Tarefa;
+import aluno.ifpb.edu.br.gerenciadordetarefas.model.Usuario;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 
 public class UsuarioController {
+
+    private UsuarioController() {
+
+    }
+
     private static final String ARQUIVO_USUARIOS = "usuarios.json";
     private static final String CAMPO_USUARIO = "Usuario";
     private static final String CAMPO_SENHA = "Senha";
@@ -37,6 +49,8 @@ public class UsuarioController {
         return false;
     }
 
+<<<<<<< HEAD
+=======
 //    public static void cadastrarUsuario(String usuario, String senha) {
 //        try {
 //            JSONArray usuariosArray = getUsuariosArray();
@@ -53,6 +67,7 @@ public class UsuarioController {
 //        }
 //    }
 
+>>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
     public static boolean cadastrarUsuario(String usuario, String senha) {
         try {
             JSONArray usuariosArray = getUsuariosArray();
@@ -91,4 +106,8 @@ public class UsuarioController {
                 ? new JSONArray(new String(Files.readAllBytes(Paths.get(ARQUIVO_USUARIOS))))
                 : new JSONArray();
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
 }

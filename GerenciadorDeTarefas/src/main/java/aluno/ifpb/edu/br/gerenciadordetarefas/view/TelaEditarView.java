@@ -115,7 +115,7 @@ public class TelaEditarView extends javax.swing.JFrame {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 try {
                     jButton2ActionPerformed(evt);
-                } catch (IOException e) {
+                } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
             }
@@ -172,36 +172,49 @@ public class TelaEditarView extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
     }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
-        Tarefa tarefaEditada = new Tarefa(usuarioLogado, "Poo", "Java", "21/12/2023", true, "alta");
-        tarefaEditada.setTitulo(jTextFieldTitulo.getText());
-        tarefaEditada.setDescricao(jTextArea1.getText());
-        tarefaEditada.setDataConclusao(jFormattedTextFieldData.getText());
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+        try {
+            Tarefa tarefaEditada = new Tarefa(tarefaParaEditar.getUsuario(), "Poo", "Java", "21/12/2023", true, "alta");
+            tarefaEditada.setTitulo(jTextFieldTitulo.getText());
+            tarefaEditada.setDescricao(jTextArea1.getText());
+            tarefaEditada.setDataConclusao(jFormattedTextFieldData.getText());
 
-        if (!isOpcaoSelecionada()) {
-            JOptionPane.showMessageDialog(this, "Por favor, selecione uma opção para Status e Importância.", "Erro", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+            if (!isOpcaoSelecionada()) {
+                JOptionPane.showMessageDialog(this, "Por favor, selecione uma opção para Status e Importância.", "Erro", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
 
-        if (jRadioButtonConcluida.isSelected()) {
-            tarefaEditada.setStatus(true);
-        } else {
-            tarefaEditada.setStatus(false);
-        }
+            if (jRadioButtonConcluida.isSelected()) {
+                tarefaEditada.setStatus(true);
+            } else {
+                tarefaEditada.setStatus(false);
+            }
 
-        if (jRadioButtonBaixa.isSelected()) {
-            tarefaEditada.setImportancia("Baixa");
-        } else if (jRadioButtonMedia.isSelected()) {
-            tarefaEditada.setImportancia("Média");
-        } else {
-            tarefaEditada.setImportancia("Alta");
-        }
+            if (jRadioButtonBaixa.isSelected()) {
+                tarefaEditada.setImportancia("Baixa");
+            } else if (jRadioButtonMedia.isSelected()) {
+                tarefaEditada.setImportancia("Média");
+            } else {
+                tarefaEditada.setImportancia("Alta");
+            }
 
+<<<<<<< HEAD
+            if (editarTarefa(tarefaParaEditar, tarefaEditada)) {
+                JOptionPane.showMessageDialog(this, "Tarefa editada com sucesso!");
+                dispose();
+                telaPrincipal.atualizarListaTarefas(Objects.requireNonNull(TarefaRepository.carregarTarefas(usuarioLogado)));
+            } else {
+                JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+=======
         if (editarTarefa(tarefaParaEditar, tarefaEditada)) {
             JOptionPane.showMessageDialog(this, "Tarefa editada com sucesso!");
             dispose();
         } else {
             JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
+>>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
         }
     }
 

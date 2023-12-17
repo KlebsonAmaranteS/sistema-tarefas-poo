@@ -100,6 +100,10 @@ public class TelaCadastroView extends javax.swing.JFrame {
     }
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
     private void jTextFieldCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {
         throw new UnsupportedOperationException("Ação não implementada.");
     }
