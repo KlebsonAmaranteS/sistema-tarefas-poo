@@ -1,6 +1,7 @@
 package aluno.ifpb.edu.br.gerenciadordetarefas;
 
 
+import aluno.ifpb.edu.br.gerenciadordetarefas.model.Usuario;
 import aluno.ifpb.edu.br.gerenciadordetarefas.view.TelaLoginView;
 
 public class Main {

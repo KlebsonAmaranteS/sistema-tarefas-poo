@@ -13,6 +13,10 @@ public class Usuario {
         return usuarioCadastrado;
     }
 
+    public void setUsuario(String usuarioCadastrado) {
+        this.usuarioCadastrado = usuarioCadastrado;
+    }
+
     public String getSenha() {
         return senha;
     }

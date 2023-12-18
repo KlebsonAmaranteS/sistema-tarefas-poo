@@ -3,7 +3,6 @@ package aluno.ifpb.edu.br.gerenciadordetarefas.view;
 import aluno.ifpb.edu.br.gerenciadordetarefas.controller.TarefaController;
 import aluno.ifpb.edu.br.gerenciadordetarefas.controller.TarefaRepository;
 import aluno.ifpb.edu.br.gerenciadordetarefas.controller.UsuarioController;
-import aluno.ifpb.edu.br.gerenciadordetarefas.model.TarefaService;
 
 import javax.swing.*;
 
@@ -14,12 +13,11 @@ public class TelaLoginView extends javax.swing.JFrame {
     public static String usuarioLogado;
 
     private final TarefaRepository tarefaRepository;
-    private final TarefaService tarefaService;
+
     public TelaLoginView() {
-        this.tarefaController = new TarefaController();
         this.tarefaRepository = new TarefaRepository();
-        this.tarefaService = new TarefaService(tarefaRepository);
-        this.tela = new TelaPrincipalView(tarefaController, tarefaRepository, tarefaService);
+        this.tarefaController = new TarefaController();
+        this.tela = new TelaPrincipalView(tarefaController, tarefaRepository);
         initComponents();
         jPasswordFieldSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

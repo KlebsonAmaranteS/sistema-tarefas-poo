@@ -11,6 +11,13 @@ public class Tarefa {
     private String importancia;
 
     public Tarefa(String usuario, String titulo, String descricao, String dataConclusao, boolean concluida, String importancia) {
+        Objects.requireNonNull(usuario, "O usuário não pode ser nulo");
+        Objects.requireNonNull(titulo, "O título não pode ser nulo");
+        Objects.requireNonNull(descricao, "A descrição não pode ser nula");
+        Objects.requireNonNull(dataConclusao, "A data de conclusão não pode ser nula");
+        Objects.requireNonNull(descricao, "O status não pode ser nulo");
+        Objects.requireNonNull(descricao, "A importância não pode ser nulo");
+
         this.usuario = usuario;
         this.titulo = titulo;
         this.descricao = descricao;
@@ -24,6 +31,10 @@ public class Tarefa {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
     public String getUsuario() {

@@ -4,10 +4,8 @@ package aluno.ifpb.edu.br.gerenciadordetarefas.view;
 import aluno.ifpb.edu.br.gerenciadordetarefas.controller.TarefaController;
 import aluno.ifpb.edu.br.gerenciadordetarefas.controller.TarefaRepository;
 import aluno.ifpb.edu.br.gerenciadordetarefas.model.Tarefa;
-import aluno.ifpb.edu.br.gerenciadordetarefas.model.TarefaService;
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,24 +15,32 @@ import static aluno.ifpb.edu.br.gerenciadordetarefas.view.TelaLoginView.usuarioL
 public class TelaPrincipalView extends javax.swing.JFrame {
     private final TarefaController tarefaController;
     private final TarefaRepository tarefaRepository;
-    private final TarefaService tarefaService;
     private List<Tarefa> tarefas;
     private final JFrame frame;
 
-    public TelaPrincipalView(TarefaController tarefaController, TarefaRepository tarefaRepository, TarefaService tarefaService) {
+    private static final String MENSAGEM_CONFIRMACAO_SAIR = "Tem certeza que deseja sair?";
+    private static final String MENSAGEM_CONFIRMACAO_REMOVER_TAREFA = "Tem certeza que deseja remover a tarefa?";
+    private static final String MENSAGEM_CONFIRMACAO_EDITAR_TAREFA = "Tem certeza que deseja editar a tarefa?";
+    private static final String MENSAGEM_NENHUMA_TAREFA_SELECIONADA_EDITAR = "Nenhuma tarefa selecionada para editar.";
+    private static final String MENSAGEM_NENHUMA_TAREFA_DISPONIVEL = "Nenhuma tarefa disponível para remover.";
+    private static final String MENSAGEM_NENHUMA_TAREFA_SELECIONADA_REMOVER = "Nenhuma tarefa selecionada para remover.";
+    private static final String MENSAGEM_NENHUMA_TAREFA_LISTAR = "Nenhuma tarefa para listar";
+
+
+    public TelaPrincipalView(TarefaController tarefaController, TarefaRepository tarefaRepository) {
         initComponents();
         this.tarefas = new ArrayList<>();
         this.frame = new JFrame("Sistema tarefas");
         this.tarefaController = tarefaController;
         this.tarefaRepository = tarefaRepository;
-        this.tarefaService = tarefaService;
         addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 try {
-                    listarTarefas();
-                } catch (RuntimeException e) {
-                    throw new RuntimeException(e);
+                    List<Tarefa> tarefas = tarefaController.listarTarefas(usuarioLogado);
+                    atualizarListaTarefas(tarefas);
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(frame, "Erro ao listar tarefas: " + e.getMessage());
                 }
             }
         });
@@ -208,7 +214,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        int opcao = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja sair?", "Confirmação", JOptionPane.YES_NO_OPTION);
+        int opcao = JOptionPane.showConfirmDialog(this, MENSAGEM_CONFIRMACAO_SAIR, "Confirmação", JOptionPane.YES_NO_OPTION);
 
         if (opcao == JOptionPane.YES_OPTION) {
             System.exit(0);
@@ -217,25 +223,22 @@ public class TelaPrincipalView extends javax.swing.JFrame {
 
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {
         try {
-            buscarTarefa();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
+            String termoBusca = jTextFieldBuscarTarefa.getText().trim();
 
-    private void buscarTarefa() {
-        String termoBusca = jTextFieldBuscarTarefa.getText();
+            if (termoBusca.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Digite um termo de busca", "Busca de Tarefas", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                List<Tarefa> tarefasFiltradas = tarefaController.buscarTarefas(usuarioLogado, termoBusca);
 
-        if (termoBusca != null && !termoBusca.isEmpty()) {
-            List<Tarefa> tarefas = TarefaRepository.carregarTarefas(usuarioLogado);
-
-            DefaultListModel<Tarefa> model = new DefaultListModel<>();
-            for (Tarefa tarefa : tarefas) {
-                if (tarefa.getDescricao().contains(termoBusca) || tarefa.getTitulo().contains(termoBusca)) {
-                    model.addElement(tarefa);
+                if (tarefasFiltradas.isEmpty()) {
+                    String mensagem = "Nenhuma tarefa encontrada para o termo: " + termoBusca;
+                    JOptionPane.showMessageDialog(this, mensagem, "Busca de Tarefas", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    atualizarListaTarefas(tarefasFiltradas);
                 }
             }
-            jList1.setModel(model);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Erro ao buscar tarefas: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -246,15 +249,15 @@ public class TelaPrincipalView extends javax.swing.JFrame {
         if (selectedIndex != -1) {
             Tarefa tarefaSelecionada = obterTarefaSelecionada(selectedIndex);
 
-            int opcao = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja editar a tarefa?", "Confirmação", JOptionPane.YES_NO_OPTION);
+            int opcao = JOptionPane.showConfirmDialog(this, MENSAGEM_CONFIRMACAO_EDITAR_TAREFA, "Confirmação", JOptionPane.YES_NO_OPTION);
 
             if (opcao == JOptionPane.YES_OPTION) {
                 TelaEditarView telaEdicao = new TelaEditarView(this, true, tarefaSelecionada);
                 telaEdicao.setVisible(true);
-                listarTarefas();
+                tarefaController.listarTarefas(usuarioLogado);
             }
         } else {
-            JOptionPane.showMessageDialog(frame, "Nenhuma tarefa selecionada para editar.");
+            JOptionPane.showMessageDialog(frame, MENSAGEM_NENHUMA_TAREFA_SELECIONADA_EDITAR);
         }
     }
 
@@ -272,12 +275,13 @@ public class TelaPrincipalView extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         SwingUtilities.invokeLater(() -> {
             try {
-                buscarTarefa();
+                jButtonBuscarActionPerformed(evt);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         });
     }
+
 
 
     private void jButtonRemoverTarefaActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
@@ -287,7 +291,7 @@ public class TelaPrincipalView extends javax.swing.JFrame {
             Tarefa selectedTask = obterTarefaSelecionada(selectedIndex);
 
             if (selectedTask != null) {
-                int opcao = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja remover a tarefa?", "Confirmação", JOptionPane.YES_NO_OPTION);
+                int opcao = JOptionPane.showConfirmDialog(this, MENSAGEM_CONFIRMACAO_REMOVER_TAREFA, "Confirmação", JOptionPane.YES_NO_OPTION);
 
                 if (opcao == JOptionPane.YES_OPTION) {
                     DefaultListModel<Tarefa> model = (DefaultListModel<Tarefa>) jList1.getModel();
@@ -299,10 +303,10 @@ public class TelaPrincipalView extends javax.swing.JFrame {
                     }
                 }
             } else {
-                JOptionPane.showMessageDialog(frame, "Nenhuma tarefa selecionada para remover.");
+                JOptionPane.showMessageDialog(frame, MENSAGEM_NENHUMA_TAREFA_DISPONIVEL);
             }
         } else {
-            JOptionPane.showMessageDialog(frame, "Nenhuma tarefa disponível para remover.");
+            JOptionPane.showMessageDialog(frame, MENSAGEM_NENHUMA_TAREFA_SELECIONADA_REMOVER);
         }
     }
 
@@ -321,27 +325,21 @@ public class TelaPrincipalView extends javax.swing.JFrame {
     }
 
     private void jButtonListarTarefa1ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
-        try{
-            listarTarefas();
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(frame, "Nenhuma tarefa para listar");
-        }
-
-    }
-
-    void listarTarefas() {
-        List<Tarefa> tarefas = TarefaRepository.carregarTarefas(usuarioLogado);
-
         try {
-            if (tarefas != null && !tarefas.isEmpty()) {
+            List<Tarefa> tarefas = tarefaController.listarTarefas(usuarioLogado);
+
+            if (tarefas.isEmpty()) {
+                JOptionPane.showMessageDialog(frame, MENSAGEM_NENHUMA_TAREFA_LISTAR);
+            } else {
                 atualizarListaTarefas(tarefas);
             }
-        }catch (Exception e){
-            e.printStackTrace();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(frame, "Erro ao listar tarefas: " + e.getMessage());
         }
     }
 
-    public void atualizarListaTarefas(List<Tarefa> tarefas) {
+
+    void atualizarListaTarefas(List<Tarefa> tarefas) {
         SwingUtilities.invokeLater(() -> {
             DefaultListModel<Tarefa> model = new DefaultListModel<>();
             for (Tarefa tarefa : tarefas) {

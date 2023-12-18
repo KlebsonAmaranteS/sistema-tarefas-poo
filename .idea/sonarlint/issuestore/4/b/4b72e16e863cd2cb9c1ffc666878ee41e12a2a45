@@ -1,0 +1,67 @@
+
+k
+java:S1192?"IDefine a constant instead of duplicating this literal "Segoe UI" 5 times.(×Éßøÿÿÿÿ8³ÅÈöÇ1
+J
+java:S1604T"(Make this anonymous inner class a lambda(‹ˆçŠıÿÿÿÿ8´ÅÈöÇ1
+J
+java:S1604g"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ8´ÅÈöÇ1
+E
+java:S1604p"(Make this anonymous inner class a lambda(ÿóÎ×8´ÅÈöÇ1
+u
+java:S1450’"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶8èÅÈöÇ1
+u
+java:S1450“"WRemove the "jButton2" field and declare it as a local variable in the relevant methods.(¤½ÃÜ8èÅÈöÇ1
+y
+java:S1450•"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ8éÅÈöÇ1
+y
+java:S1450–"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ8éÅÈöÇ1
+y
+java:S1450—"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ8éÅÈöÇ1
+t
+java:S1450˜"VRemove the "jLabel4" field and declare it as a local variable in the relevant methods.(«¢•ã8éÅÈöÇ1
+t
+java:S1450™"VRemove the "jLabel5" field and declare it as a local variable in the relevant methods.(ó Ù®8éÅÈöÇ1
+s
+java:S1450£"URemove the "jList1" field and declare it as a local variable in the relevant methods.(™ëÙÙ8éÅÈöÇ1
+~
+java:S1450Ÿ"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ8éÅÈöÇ1
+N
+java:S1948",Make "novaTarefa" transient or serializable.(¬ƒ‹Òıÿÿÿÿ8éÅÈöÇ1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(–èšñ8ëÅÈöÇ1
+a
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.( ¹è	8ëÅÈöÇ1
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ˆ²õÚúÿÿÿÿ8ëÅÈöÇ1
+I
+java:S1602I",Remove useless curly braces around statement(ÂÑ‰½8÷ÅÈöÇ1
+o
+java:S1612I"RReplace this lambda with method reference 'this::jTextFieldTituloActionPerformed'.(ÂÑ‰½8øÅÈöÇ1
+M
+java:S1172—"*Remove this unused method parameter "evt".(ãİæëüÿÿÿÿ8ƒÆÈöÇ1
+M
+java:S1172 "*Remove this unused method parameter "evt".(…£úÿÿÿÿ8„ÆÈöÇ1
+M
+java:S1172¨"*Remove this unused method parameter "evt".(‘ òôøÿÿÿÿ8„ÆÈöÇ1
+a
+java:S1117®">Rename "novaTarefa" which hides the field declared at line 15.(áÂ€¿ùÿÿÿÿ8…ÆÈöÇ1
+\
+java:S1854¿">Remove this useless assignment to local variable "novaTarefa".(ÊğçÆ8‡ÆÈöÇ1
+M
+java:S1172»"*Remove this unused method parameter "evt".(ÿŞÿĞøÿÿÿÿ8ˆÆÈöÇ1
+\
+java:S1117¿">Rename "novaTarefa" which hides the field declared at line 15.(ÊğçÆ8ˆÆÈöÇ1
+M
+java:S1481¿"/Remove this unused "novaTarefa" local variable.(ÊğçÆ8‰ÆÈöÇ1
+^
+java:S1117Ó";Rename "tarefas" which hides the field declared at line 16.(÷š¬×úÿÿÿÿ8‹ÆÈöÇ1
+a
+java:S1117Õ">Rename "novaTarefa" which hides the field declared at line 15.(İ»†øıÿÿÿÿ8‹ÆÈöÇ1
+n
+java:S1128"QRemove this unused import 'aluno.ifpb.edu.br.gerenciadordetarefas.model.Usuario'.( ğè‡8¼ÅîöÇ1
+P
+java:S1068".Remove this unused "novaTarefa" private field.(¬ƒ‹Òıÿÿÿÿ8’ÆÈöÇ1
+H
+java:S1068"+Remove this unused "tarefas" private field.(–èšñ8’ÆÈöÇ1
+H
+java:S1068£"*Remove this unused "jList1" private field.(™ëÙÙ8’ÆÈöÇ1
