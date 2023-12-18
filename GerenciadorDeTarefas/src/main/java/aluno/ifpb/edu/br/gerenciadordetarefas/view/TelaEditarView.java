@@ -198,7 +198,6 @@ public class TelaEditarView extends javax.swing.JFrame {
                 tarefaEditada.setImportancia("Alta");
             }
 
-<<<<<<< HEAD
             if (editarTarefa(tarefaParaEditar, tarefaEditada)) {
                 JOptionPane.showMessageDialog(this, "Tarefa editada com sucesso!");
                 dispose();
@@ -208,13 +207,6 @@ public class TelaEditarView extends javax.swing.JFrame {
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
-=======
-        if (editarTarefa(tarefaParaEditar, tarefaEditada)) {
-            JOptionPane.showMessageDialog(this, "Tarefa editada com sucesso!");
-            dispose();
-        } else {
-            JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
->>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
         }
     }
 

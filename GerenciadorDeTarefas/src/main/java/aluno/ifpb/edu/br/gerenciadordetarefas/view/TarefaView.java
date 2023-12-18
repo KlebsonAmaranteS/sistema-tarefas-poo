@@ -7,10 +7,6 @@ import aluno.ifpb.edu.br.gerenciadordetarefas.model.TarefaService;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
-<<<<<<< HEAD
-=======
-import java.util.Objects;
->>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
 
 import static aluno.ifpb.edu.br.gerenciadordetarefas.view.TelaLoginView.usuarioLogado;
 
