@@ -16,9 +16,6 @@ import java.util.List;
 
 public class UsuarioController {
 
-    private UsuarioController() {
-
-    }
 
     private static final String ARQUIVO_USUARIOS = "usuarios.json";
     private static final String CAMPO_USUARIO = "Usuario";
@@ -49,25 +46,6 @@ public class UsuarioController {
         return false;
     }
 
-<<<<<<< HEAD
-=======
-//    public static void cadastrarUsuario(String usuario, String senha) {
-//        try {
-//            JSONArray usuariosArray = getUsuariosArray();
-//
-//            JSONObject novoUsuario = new JSONObject();
-//            novoUsuario.put(CAMPO_USUARIO, usuario);
-//            novoUsuario.put(CAMPO_SENHA, senha);
-//
-//            usuariosArray.put(novoUsuario);
-//
-//            Files.write(Paths.get(ARQUIVO_USUARIOS), usuariosArray.toString().getBytes());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
->>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
     public static boolean cadastrarUsuario(String usuario, String senha) {
         try {
             JSONArray usuariosArray = getUsuariosArray();
@@ -106,8 +84,4 @@ public class UsuarioController {
                 ? new JSONArray(new String(Files.readAllBytes(Paths.get(ARQUIVO_USUARIOS))))
                 : new JSONArray();
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 3a908b151b33b218a4344de0913dc3e3dc718cf2
 }
