@@ -2,7 +2,7 @@ package aluno.ifpb.edu.br.gerenciadordetarefas.view;
 
 import aluno.ifpb.edu.br.gerenciadordetarefas.controller.*;
 import aluno.ifpb.edu.br.gerenciadordetarefas.model.Tarefa;
-import aluno.ifpb.edu.br.gerenciadordetarefas.model.TarefaService;
+import aluno.ifpb.edu.br.gerenciadordetarefas.model.Usuario;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -12,16 +12,17 @@ import static aluno.ifpb.edu.br.gerenciadordetarefas.view.TelaLoginView.usuarioL
 
 public class TarefaView extends javax.swing.JFrame {
 
-
+    private final Tarefa novaTarefa;
     private transient final List<Tarefa> tarefas;
     private transient final TarefaRepository tarefaPersistence;
-    private transient final TarefaService tarefaService;
+    private transient final TarefaController tarefaController;
     private final TelaPrincipalView telaPrincipal;
 
     public TarefaView(TarefaController tarefaController) {
+        novaTarefa = new Tarefa("", "", "", "", false, "");
         this.tarefaPersistence = new TarefaRepository();
-        this.tarefaService = new TarefaService(tarefaPersistence);
-        this.telaPrincipal = new TelaPrincipalView(tarefaController, tarefaPersistence, tarefaService);
+        this.tarefaController = tarefaController;
+        this.telaPrincipal = new TelaPrincipalView(tarefaController, tarefaPersistence);
         tarefas = new ArrayList<>();
         initComponents();
         buttonGroup1.add(jRadioButtonNaoConcluida);
@@ -36,6 +37,7 @@ public class TarefaView extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
+        jList1 = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTextFieldTitulo = new javax.swing.JTextField();
@@ -168,18 +170,31 @@ public class TarefaView extends javax.swing.JFrame {
         telaPrincipal.setVisible(true);
     }
 
+    private Tarefa criarTarefa() {
+        Tarefa novaTarefa = new Tarefa("usuarioCadastrado", "", "", "", false, "");
+
+        novaTarefa.setUsuario(usuarioLogado);
+        novaTarefa.setTitulo(jTextFieldTitulo.getText());
+        novaTarefa.setDescricao(jTextArea1.getText());
+        novaTarefa.setDataConclusao(jFormattedTextFieldData.getText());
+        novaTarefa.setConcluida(jRadioButtonConcluida.isSelected());
+        novaTarefa.setImportancia(obterImportanciaSelecionada());
+
+        return novaTarefa;
+    }
+
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         try {
-            String titulo = jTextFieldTitulo.getText();
-            String descricao = jTextArea1.getText();
-            String dataConclusao = jFormattedTextFieldData.getText();
+            validateInput(jTextFieldTitulo.getText(), jTextArea1.getText(), jFormattedTextFieldData.getText());
 
-            validateInput(titulo, descricao, dataConclusao);
+            Tarefa novaTarefa = criarTarefa();
+
             salvarTarefasEmJSON(usuarioLogado);
-            telaPrincipal.listarTarefas();
+            tarefaController.listarTarefas(usuarioLogado);
             this.dispose();
             telaPrincipal.setVisible(true);
+
 
         } catch (IllegalArgumentException e) {
             JOptionPane.showMessageDialog(this, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
@@ -206,7 +221,7 @@ public class TarefaView extends javax.swing.JFrame {
 
             tarefas.add(novaTarefa);
 
-            tarefaPersistence.salvarTarefas(tarefas, usuario);
+            tarefaPersistence.salvarTarefas(tarefas, usuarioLogado);
             telaPrincipal.atualizarListaTarefas(tarefas);
             JOptionPane.showMessageDialog(this, "Tarefa cadastrada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
         } catch (Exception e) {
@@ -273,4 +288,5 @@ public class TarefaView extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextFieldTitulo;
 
+    private javax.swing.JList<Tarefa> jList1;
 }

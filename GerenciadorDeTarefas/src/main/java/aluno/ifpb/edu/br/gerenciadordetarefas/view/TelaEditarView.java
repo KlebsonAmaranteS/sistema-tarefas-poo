@@ -1,5 +1,6 @@
 package aluno.ifpb.edu.br.gerenciadordetarefas.view;
 
+import aluno.ifpb.edu.br.gerenciadordetarefas.controller.TarefaController;
 import aluno.ifpb.edu.br.gerenciadordetarefas.controller.TarefaRepository;
 import aluno.ifpb.edu.br.gerenciadordetarefas.model.Tarefa;
 
@@ -15,18 +16,17 @@ public class TelaEditarView extends javax.swing.JFrame {
     private final Tarefa tarefaParaEditar;
     private final TarefaRepository tarefaPersistence;
 
+    private TarefaController tarefaController;
+
     public TelaEditarView(TelaPrincipalView telaPrincipal, boolean modal, Tarefa tarefaParaEditar) {
 
         initComponents();
         this.telaPrincipal = telaPrincipal;
         this.tarefaParaEditar = tarefaParaEditar;
         this.tarefaPersistence = new TarefaRepository();
+        this.tarefaController = new TarefaController();
         preencherCampos();
-        buttonGroup1.add(jRadioButtonNaoConcluida);
-        buttonGroup1.add(jRadioButtonConcluida);
-        buttonGroup2.add(jRadioButtonBaixa);
-        buttonGroup2.add(jRadioButtonMedia);
-        buttonGroup2.add(jRadioButtonAlta);
+        configurarGruposBotoes();
 
 
     }
@@ -38,6 +38,7 @@ public class TelaEditarView extends javax.swing.JFrame {
         javax.swing.JFormattedTextField jFormattedTextFieldDataConclusao;
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
+        jList1 = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTextFieldTitulo = new javax.swing.JTextField();
@@ -161,6 +162,13 @@ public class TelaEditarView extends javax.swing.JFrame {
         jFormattedTextFieldData.setText(tarefaParaEditar.getDataConclusao());
 
     }
+    private void configurarGruposBotoes() {
+        buttonGroup1.add(jRadioButtonNaoConcluida);
+        buttonGroup1.add(jRadioButtonConcluida);
+        buttonGroup2.add(jRadioButtonBaixa);
+        buttonGroup2.add(jRadioButtonMedia);
+        buttonGroup2.add(jRadioButtonAlta);
+    }
 
     private void jTextFieldTituloActionPerformed(java.awt.event.ActionEvent evt) {
     }
@@ -170,67 +178,67 @@ public class TelaEditarView extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+        dispose();
     }
+
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         try {
-            Tarefa tarefaEditada = new Tarefa(tarefaParaEditar.getUsuario(), "Poo", "Java", "21/12/2023", true, "alta");
-            tarefaEditada.setTitulo(jTextFieldTitulo.getText());
-            tarefaEditada.setDescricao(jTextArea1.getText());
-            tarefaEditada.setDataConclusao(jFormattedTextFieldData.getText());
+            Tarefa tarefaEditada = criarTarefaEditada();
 
-            if (!isOpcaoSelecionada()) {
+            if (validarOpcoesSelecionadas()) {
+                if (tarefaController.editarTarefa(tarefaParaEditar, tarefaEditada)) {
+                    JOptionPane.showMessageDialog(this, "Tarefa editada com sucesso!");
+                    dispose();
+                    atualizarListaETelaPrincipal();
+                } else {
+                    JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
                 JOptionPane.showMessageDialog(this, "Por favor, selecione uma opção para Status e Importância.", "Erro", JOptionPane.ERROR_MESSAGE);
-                return;
-            }
-
-            if (jRadioButtonConcluida.isSelected()) {
-                tarefaEditada.setStatus(true);
-            } else {
-                tarefaEditada.setStatus(false);
-            }
-
-            if (jRadioButtonBaixa.isSelected()) {
-                tarefaEditada.setImportancia("Baixa");
-            } else if (jRadioButtonMedia.isSelected()) {
-                tarefaEditada.setImportancia("Média");
-            } else {
-                tarefaEditada.setImportancia("Alta");
-            }
-
-            if (editarTarefa(tarefaParaEditar, tarefaEditada)) {
-                JOptionPane.showMessageDialog(this, "Tarefa editada com sucesso!");
-                dispose();
-                telaPrincipal.atualizarListaTarefas(Objects.requireNonNull(TarefaRepository.carregarTarefas(usuarioLogado)));
-            } else {
-                JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private boolean isOpcaoSelecionada() {
+    private Tarefa criarTarefaEditada() {
+        return new Tarefa(
+                tarefaParaEditar.getUsuario(),
+                jTextFieldTitulo.getText(),
+                jTextArea1.getText(),
+                jFormattedTextFieldData.getText(),
+                jRadioButtonConcluida.isSelected(),
+                obterImportanciaSelecionada()
+        );
+    }
+
+    private boolean validarOpcoesSelecionadas() {
         return (jRadioButtonNaoConcluida.isSelected() || jRadioButtonConcluida.isSelected()) &&
                 (jRadioButtonBaixa.isSelected() || jRadioButtonMedia.isSelected() || jRadioButtonAlta.isSelected());
     }
 
-    private boolean editarTarefa(Tarefa tarefaOriginal, Tarefa tarefaEditada) throws IOException {
-        List<Tarefa> tarefas = TarefaRepository.carregarTarefas(usuarioLogado);
-
-        int indice = tarefas.indexOf(tarefaOriginal);
-
-        if (indice != -1) {
-            tarefas.set(indice, tarefaEditada);
-            tarefaPersistence.salvarTarefas(tarefas, usuarioLogado);
-
-            return true;
+    private String obterImportanciaSelecionada() {
+        if (jRadioButtonBaixa.isSelected()) {
+            return "Baixa";
+        } else if (jRadioButtonMedia.isSelected()) {
+            return "Média";
+        } else if (jRadioButtonAlta.isSelected()) {
+            return "Alta";
+        } else {
+            return "";
         }
-
-        return false;
     }
 
 
+    private void atualizarListaETelaPrincipal() throws IOException {
+        List<Tarefa> tarefas = Objects.requireNonNull(TarefaRepository.carregarTarefas(usuarioLogado));
+        telaPrincipal.atualizarListaTarefas(tarefas);
+    }
+
+
+
+    private javax.swing.JList<Tarefa> jList1;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButton1;

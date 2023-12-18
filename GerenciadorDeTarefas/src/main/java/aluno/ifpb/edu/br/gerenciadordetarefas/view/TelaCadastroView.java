@@ -71,19 +71,6 @@ public class TelaCadastroView extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
 
-
-//    private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
-//        String usuario = jTextFieldCriarUsuario.getText();
-//        String senha = new String(jPasswordFieldCriarSenha.getPassword());
-//
-//        UsuarioController.cadastrarUsuario(usuario, senha);
-//
-//        JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
-//
-//        jTextFieldCriarUsuario.setText("");
-//        jPasswordFieldCriarSenha.setText("");
-//    }
-
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
         String usuario = jTextFieldCriarUsuario.getText();
         String senha = new String(jPasswordFieldCriarSenha.getPassword());
