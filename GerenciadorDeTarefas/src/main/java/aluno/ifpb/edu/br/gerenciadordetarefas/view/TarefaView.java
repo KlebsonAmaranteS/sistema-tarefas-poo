@@ -17,12 +17,14 @@ public class TarefaView extends javax.swing.JFrame {
     private transient final TarefaRepository tarefaPersistence;
     private transient final TarefaController tarefaController;
     private final TelaPrincipalView telaPrincipal;
+    private Usuario usuarioCadastrado;
 
     public TarefaView(TarefaController tarefaController) {
         novaTarefa = new Tarefa("", "", "", "", false, "");
         this.tarefaPersistence = new TarefaRepository();
         this.tarefaController = tarefaController;
         this.telaPrincipal = new TelaPrincipalView(tarefaController, tarefaPersistence);
+        this.usuarioCadastrado = new Usuario("", "");
         tarefas = new ArrayList<>();
         initComponents();
         buttonGroup1.add(jRadioButtonNaoConcluida);
@@ -173,7 +175,7 @@ public class TarefaView extends javax.swing.JFrame {
     private Tarefa criarTarefa() {
         Tarefa novaTarefa = new Tarefa("usuarioCadastrado", "", "", "", false, "");
 
-        novaTarefa.setUsuario(usuarioLogado);
+        usuarioCadastrado.setUsuario(usuarioLogado);
         novaTarefa.setTitulo(jTextFieldTitulo.getText());
         novaTarefa.setDescricao(jTextArea1.getText());
         novaTarefa.setDataConclusao(jFormattedTextFieldData.getText());

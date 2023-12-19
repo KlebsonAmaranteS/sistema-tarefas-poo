@@ -1,5 +1,6 @@
 package aluno.ifpb.edu.br.gerenciadordetarefas.controller;
 
+import aluno.ifpb.edu.br.gerenciadordetarefas.model.Usuario;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -16,15 +17,15 @@ public class UsuarioController {
 
     private UsuarioController() {}
 
-    public static boolean realizarLogin(String usuario, String senha) {
+    public static boolean realizarLogin(Usuario usuario, Usuario senha) {
         try {
             JSONArray usuariosArray = getUsuariosArray();
 
             for (int i = 0; i < usuariosArray.length(); i++) {
                 JSONObject usuarioObj = usuariosArray.getJSONObject(i);
 
-                if (usuarioObj.getString(CAMPO_USUARIO).equals(usuario) &&
-                        usuarioObj.getString(CAMPO_SENHA).equals(senha)) {
+                if (usuarioObj.getString(CAMPO_USUARIO).equals(usuario.getNomeUsuario()) &&
+                        usuarioObj.getString(CAMPO_SENHA).equals(senha.getSenha())) {
                     return true;
                 }
             }
