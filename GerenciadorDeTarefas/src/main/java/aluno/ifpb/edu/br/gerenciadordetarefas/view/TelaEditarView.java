@@ -3,6 +3,7 @@ package aluno.ifpb.edu.br.gerenciadordetarefas.view;
 import aluno.ifpb.edu.br.gerenciadordetarefas.controller.TarefaController;
 import aluno.ifpb.edu.br.gerenciadordetarefas.controller.TarefaRepository;
 import aluno.ifpb.edu.br.gerenciadordetarefas.model.Tarefa;
+import aluno.ifpb.edu.br.gerenciadordetarefas.model.Usuario;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -14,6 +15,7 @@ import static aluno.ifpb.edu.br.gerenciadordetarefas.view.TelaLoginView.usuarioL
 public class TelaEditarView extends javax.swing.JFrame {
     private final TelaPrincipalView telaPrincipal;
     private final Tarefa tarefaParaEditar;
+    private Usuario usuarioCadastrado;
     private final TarefaRepository tarefaPersistence;
 
     private TarefaController tarefaController;
@@ -23,6 +25,7 @@ public class TelaEditarView extends javax.swing.JFrame {
         initComponents();
         this.telaPrincipal = telaPrincipal;
         this.tarefaParaEditar = tarefaParaEditar;
+        this.usuarioCadastrado = new Usuario("", "");
         this.tarefaPersistence = new TarefaRepository();
         this.tarefaController = new TarefaController();
         preencherCampos();
@@ -204,7 +207,7 @@ public class TelaEditarView extends javax.swing.JFrame {
 
     private Tarefa criarTarefaEditada() {
         return new Tarefa(
-                tarefaParaEditar.getUsuario(),
+                usuarioCadastrado.getNomeUsuario(),
                 jTextFieldTitulo.getText(),
                 jTextArea1.getText(),
                 jFormattedTextFieldData.getText(),

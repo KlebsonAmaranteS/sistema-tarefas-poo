@@ -1,15 +1,17 @@
 package aluno.ifpb.edu.br.gerenciadordetarefas.model;
 
+
+
 public class Usuario {
-    private String usuarioCadastrado;
     private String senha;
+    private String usuarioCadastrado;
 
     public Usuario(String usuario, String senha) {
         this.usuarioCadastrado = usuario;
         this.senha = senha;
     }
 
-    public String getUsuario() {
+    public String getNomeUsuario() {
         return usuarioCadastrado;
     }
 
@@ -20,4 +22,8 @@ public class Usuario {
     public String getSenha() {
         return senha;
     }
+    public void setSenha(String senha){
+        this.senha = senha;
+    }
+
 }
