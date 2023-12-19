@@ -1,61 +1,63 @@
 
-g	java:S112x"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8áğÇ1
-h	java:S112É"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8áğÇ1
+g	java:S112{"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ô‰±ûÇ1
+h	java:S112Ğ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8»ÇˆüÇ1
 f
-java:S1192@"IDefine a constant instead of duplicating this literal "Segoe UI" 5 times.(ÙÌÎ8–áğÇ1
+java:S1192C"IDefine a constant instead of duplicating this literal "Segoe UI" 5 times.(ÙÌÎ8Ø‰±ûÇ1
 J
-java:S1604J"(Make this anonymous inner class a lambda(û‰Ùïşÿÿÿÿ8˜áğÇ1
+java:S1604M"(Make this anonymous inner class a lambda(û‰Ùïşÿÿÿÿ8Ù‰±ûÇ1
 J
-java:S1604W"(Make this anonymous inner class a lambda(‹ˆçŠıÿÿÿÿ8˜áğÇ1
+java:S1604Z"(Make this anonymous inner class a lambda(‹ˆçŠıÿÿÿÿ8Ù‰±ûÇ1
 J
-java:S1604j"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ8˜áğÇ1
+java:S1604m"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ8Ù‰±ûÇ1
 E
-java:S1604s"(Make this anonymous inner class a lambda(ÿóÎ×8˜áğÇ1
+java:S1604v"(Make this anonymous inner class a lambda(ÿóÎ×8Ú‰±ûÇ1
 ¤
-java:S1186­"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ãİæëüÿÿÿÿ8ÀáğÇ1
+java:S1186°"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ãİæëüÿÿÿÿ8ó‰±ûÇ1
 ¤
-java:S1186°"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(…£úÿÿÿÿ8ÁáğÇ1
+java:S1186³"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(…£úÿÿÿÿ8ó‰±ûÇ1
 u
-java:S1450ô"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶8ÃáğÇ1
+java:S1450‚"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶8ÊœÓùÇ1
 u
-java:S1450õ"WRemove the "jButton2" field and declare it as a local variable in the relevant methods.(¤½ÃÜ8ÃáğÇ1
+java:S1450ƒ"WRemove the "jButton2" field and declare it as a local variable in the relevant methods.(¤½ÃÜ8ÊœÓùÇ1
 y
-java:S1450÷"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ8ÃáğÇ1
+java:S1450…"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ8ÊœÓùÇ1
 y
-java:S1450ø"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ8ÃáğÇ1
+java:S1450†"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ8ÊœÓùÇ1
 y
-java:S1450ù"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ8ÄáğÇ1
+java:S1450‡"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ8ËœÓùÇ1
 t
-java:S1450ú"VRemove the "jLabel4" field and declare it as a local variable in the relevant methods.(«¢•ã8ÄáğÇ1
+java:S1450ˆ"VRemove the "jLabel4" field and declare it as a local variable in the relevant methods.(«¢•ã8ËœÓùÇ1
 t
-java:S1450û"VRemove the "jLabel5" field and declare it as a local variable in the relevant methods.(ó Ù®8ÄáğÇ1
+java:S1450‰"VRemove the "jLabel5" field and declare it as a local variable in the relevant methods.(ó Ù®8ËœÓùÇ1
 s
-java:S1450ñ"URemove the "jList1" field and declare it as a local variable in the relevant methods.(™ëÙÙ8× öÇ1
+java:S1450ÿ"URemove the "jList1" field and declare it as a local variable in the relevant methods.(™ëÙÙ8ËœÓùÇ1
 ~
-java:S1450"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ8ÄáğÇ1
+java:S1450"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ8ËœÓùÇ1
 T
-java:S1948"2Make "tarefaParaEditar" transient or serializable.(ÂöÌ¹úÿÿÿÿ8ÇáğÇ1
-P
-java:S1948"3Make "tarefaPersistence" transient or serializable.(ã¯8ÇáğÇ1
+java:S1948"2Make "tarefaParaEditar" transient or serializable.(ÂöÌ¹úÿÿÿÿ8ö‰±ûÇ1
 O
-java:S1948"2Make "tarefaController" transient or serializable.(ù›î¯8÷ïöÇ1
+java:S1948"3Make "usuarioCadastrado" transient or serializable.(·ì«L8Âº¿ûÇ1
+P
+java:S1948"3Make "tarefaPersistence" transient or serializable.(ã¯8÷‰±ûÇ1
+O
+java:S1948"2Make "tarefaController" transient or serializable.(ù›î¯8÷‰±ûÇ1
 I
-java:S1172",Remove this unused method parameter "modal".(í¹‰Ñ8ÌáğÇ1
+java:S1172",Remove this unused method parameter "modal".(í¹‰Ñ8ø‰±ûÇ1
 Y
-java:S1481%"7Remove this unused "jTextAreaDescricao" local variable.(ÄŞê…üÿÿÿÿ8ÎáğÇ1
+java:S1481("7Remove this unused "jTextAreaDescricao" local variable.(ÄŞê…üÿÿÿÿ8û‰±ûÇ1
 b
-java:S1481&"ERemove this unused "jFormattedTextFieldDataConclusao" local variable.(âÁ•Ë8ÏáğÇ1
+java:S1481)"ERemove this unused "jFormattedTextFieldDataConclusao" local variable.(âÁ•Ë8û‰±ûÇ1
 M
-java:S1172­"*Remove this unused method parameter "evt".(ãİæëüÿÿÿÿ8çáğÇ1
+java:S1172°"*Remove this unused method parameter "evt".(ãİæëüÿÿÿÿ8—Š±ûÇ1
 M
-java:S1172°"*Remove this unused method parameter "evt".(…£úÿÿÿÿ8èáğÇ1
+java:S1172³"*Remove this unused method parameter "evt".(…£úÿÿÿÿ8—Š±ûÇ1
 M
-java:S1172´"*Remove this unused method parameter "evt".(‘ òôøÿÿÿÿ8ëáğÇ1
+java:S1172·"*Remove this unused method parameter "evt".(‘ òôøÿÿÿÿ8—Š±ûÇ1
 M
-java:S1172¹"*Remove this unused method parameter "evt".(ÿŞÿĞøÿÿÿÿ8×º‡÷Ç1
+java:S1172¼"*Remove this unused method parameter "evt".(ÿŞÿĞøÿÿÿÿ8êÈˆüÇ1
 Š
-java:S1130ê"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(†¶Ê8çƒ¡öÇ1
+java:S1130ø"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(†¶Ê8Š×™ûÇ1
 R
-java:S1068"5Remove this unused "tarefaPersistence" private field.(ã¯8¥›ÿõÇ1
+java:S1068"5Remove this unused "tarefaPersistence" private field.(ã¯8—Š±ûÇ1
 H
-java:S1068ñ"*Remove this unused "jList1" private field.(™ëÙÙ8º× öÇ1
+java:S1068ÿ"*Remove this unused "jList1" private field.(™ëÙÙ8ëœÓùÇ1
