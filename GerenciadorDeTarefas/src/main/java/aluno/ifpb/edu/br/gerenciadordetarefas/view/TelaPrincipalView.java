@@ -6,6 +6,7 @@ import aluno.ifpb.edu.br.gerenciadordetarefas.controller.TarefaRepository;
 import aluno.ifpb.edu.br.gerenciadordetarefas.model.Tarefa;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -158,7 +159,13 @@ public class TelaPrincipalView extends javax.swing.JFrame {
 
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                SwingUtilities.invokeLater(() -> {
+                    try {
+                        jButtonBuscarActionPerformed(evt);
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                });
             }
         });
 
@@ -221,26 +228,34 @@ public class TelaPrincipalView extends javax.swing.JFrame {
         }
     }
 
+
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             String termoBusca = jTextFieldBuscarTarefa.getText().trim();
 
             if (termoBusca.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Digite um termo de busca", "Busca de Tarefas", JOptionPane.INFORMATION_MESSAGE);
+                EventQueue.invokeLater(() -> {
+                    JOptionPane.showMessageDialog(this, "Digite um termo de busca", "Busca de Tarefas", JOptionPane.INFORMATION_MESSAGE);
+                });
             } else {
                 List<Tarefa> tarefasFiltradas = tarefaController.buscarTarefas(usuarioLogado, termoBusca);
 
-                if (tarefasFiltradas.isEmpty()) {
-                    String mensagem = "Nenhuma tarefa encontrada para o termo: " + termoBusca;
-                    JOptionPane.showMessageDialog(this, mensagem, "Busca de Tarefas", JOptionPane.INFORMATION_MESSAGE);
-                } else {
-                    atualizarListaTarefas(tarefasFiltradas);
-                }
+                EventQueue.invokeLater(() -> {
+                    if (tarefasFiltradas.isEmpty()) {
+                        String mensagem = "Nenhuma tarefa encontrada para o termo: " + termoBusca;
+                        JOptionPane.showMessageDialog(this, mensagem, "Busca de Tarefas", JOptionPane.INFORMATION_MESSAGE);
+                    } else {
+                        atualizarListaTarefas(tarefasFiltradas);
+                    }
+                });
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Erro ao buscar tarefas: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+            EventQueue.invokeLater(() -> {
+                JOptionPane.showMessageDialog(this, "Erro ao buscar tarefas: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+            });
         }
     }
+
 
 
     private void jButtonEditarTarefaActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
@@ -364,4 +379,3 @@ public class TelaPrincipalView extends javax.swing.JFrame {
 
     private javax.swing.JButton jButtonBuscar;
 }
-

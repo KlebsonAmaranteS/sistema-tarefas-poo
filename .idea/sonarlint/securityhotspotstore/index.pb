@@ -7,8 +7,6 @@ SGerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/Main.
 [GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Tarefa.java,8\f\8f90e70941d478aeb9f31884e052b4303ef25e5e
 Œ
 \GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/Usuario.java,2\1\21b8143a1bbfaf89e09ef865ee4b66f7d5acc96a
-’
-bGerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/model/TarefaService.java,b\2\b20a4588a93b885bac4faf26184d9108dd3b2990
 Ž
 ^GerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TarefaView.java,4\b\4b72e16e863cd2cb9c1ffc666878ee41e12a2a45
 ‘
@@ -21,8 +19,6 @@ dGerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/
 bGerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaEditarView.java,5\1\511c0cd8882eb7e63b8e332977a11209e048d855
 •
 eGerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/view/TelaPrincipalView.java,d\4\d43e928d4bba709593b5657934d209e70e98f54e
-=
-usuarios.json,6\2\6237ed094736bef390f894c49e3f9dbb1c3d6e7b
 š
 jGerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/TarefaRepository.java,c\e\ce35a00eaf672db3f35f2a7e1ffe35132b64f394
 š
@@ -35,7 +31,3 @@ pGerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/contr
 oGerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/DataInvalidaException.java,7\3\7312be1dbf4bb5109fb33de140a592c6214986b0
 —
 gGerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/DataValidator.java,d\9\d9a958555e8eadedf11b2e1cd83dec6078c9f1a5
- 
-pGerenciadorDeTarefas/src/main/java/aluno/ifpb/edu/br/gerenciadordetarefas/controller/NenhumaTarefaException.java,a\d\ad60b03899f3fca22f27a986a19edfefc126593d
-D
-tarefas_klebson.json,9\f\9fc62d1418bb370406f9f8078283d79fd9ac92fa

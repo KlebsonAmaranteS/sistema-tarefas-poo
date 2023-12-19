@@ -1,47 +1,49 @@
 
 E
-java:S1604"(Make this anonymous inner class a lambda(©ğÊ…8ğ¿Ş÷Ç1
+java:S1604"(Make this anonymous inner class a lambda(©ğÊ…8ïó»ûÇ1
 J
-java:S1604."(Make this anonymous inner class a lambda(ä‘åıÿÿÿÿ8ğ¿Ş÷Ç1
+java:S16040"(Make this anonymous inner class a lambda(ä‘åıÿÿÿÿ8ïó»ûÇ1
 J
-java:S16047"(Make this anonymous inner class a lambda(²åŞàüÿÿÿÿ8ñ¿Ş÷Ç1
+java:S16049"(Make this anonymous inner class a lambda(²åŞàüÿÿÿÿ8ïó»ûÇ1
 E
-java:S1604G"(Make this anonymous inner class a lambda(ü»Î8ñ¿Ş÷Ç1
+java:S1604I"(Make this anonymous inner class a lambda(ü»Î8ïó»ûÇ1
 D
-java:S1604P"(Make this anonymous inner class a lambda(¥Šîj8ñ¿Ş÷Ç1
+java:S1604R"(Make this anonymous inner class a lambda(¥Šîj8ïó»ûÇ1
 v
-java:S1104"YMake usuarioLogado a static final constant or non-public and provide accessors if needed.(ÄË’ì8ñ¿Ş÷Ç1
+java:S1104"YMake usuarioLogado a static final constant or non-public and provide accessors if needed.(ÄË’ì8ğó»ûÇ1
 P
-java:S1444"3Make this "public static usuarioLogado" field final(ÄË’ì8ñ¿Ş÷Ç1
+java:S1444"3Make this "public static usuarioLogado" field final(ÄË’ì8ğó»ûÇ1
 £
-java:S1186f"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§ñÜşûÿÿÿÿ8…ÀŞ÷Ç1
+java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§ñÜşûÿÿÿÿ8ÿó»ûÇ1
 
-java:S1186ƒ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(å§¸+8…ÀŞ÷Ç1
+java:S1186‡"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(å§¸+8ÿó»ûÇ1
 {
-java:S1450ˆ"XRemove the "blusuario" field and declare it as a local variable in the relevant methods.(ä°âÎüÿÿÿÿ8‡ÀŞ÷Ç1
+java:S1450Œ"XRemove the "blusuario" field and declare it as a local variable in the relevant methods.(ä°âÎüÿÿÿÿ8‚ô»ûÇ1
 z
-java:S1450‰"WRemove the "jButton3" field and declare it as a local variable in the relevant methods.(ĞäğËıÿÿÿÿ8‡ÀŞ÷Ç1
+java:S1450"WRemove the "jButton3" field and declare it as a local variable in the relevant methods.(ĞäğËıÿÿÿÿ8ƒô»ûÇ1
 
-java:S1450Š"\Remove the "jButtonEntrar" field and declare it as a local variable in the relevant methods.(Ñ­Äİşÿÿÿÿ8‡ÀŞ÷Ç1
+java:S1450"\Remove the "jButtonEntrar" field and declare it as a local variable in the relevant methods.(Ñ­Äİşÿÿÿÿ8ƒô»ûÇ1
 }
-java:S1450‹"ZRemove the "jButtonSair" field and declare it as a local variable in the relevant methods.(ëî‰·úÿÿÿÿ8‡ÀŞ÷Ç1
+java:S1450"ZRemove the "jButtonSair" field and declare it as a local variable in the relevant methods.(ëî‰·úÿÿÿÿ8ƒô»ûÇ1
 u
-java:S1450"WRemove the "lblsenha" field and declare it as a local variable in the relevant methods.(ÊƒÄŒ8‡ÀŞ÷Ç1
+java:S1450’"WRemove the "lblsenha" field and declare it as a local variable in the relevant methods.(ÊƒÄŒ8ƒô»ûÇ1
 O
-java:S1948"2Make "tarefaController" transient or serializable.(‡ï’î8ŠÀŞ÷Ç1
+java:S1948"2Make "tarefaController" transient or serializable.(‡ï’î8„ô»ûÇ1
 O
-java:S1948"2Make "tarefaRepository" transient or serializable.(çÆ‰8‹ÀŞ÷Ç1
+java:S1948"3Make "usuarioCadastrado" transient or serializable.(·ì«L8„ô»ûÇ1
+O
+java:S1948"2Make "tarefaRepository" transient or serializable.(çÆ‰8„ô»ûÇ1
 \
-java:S1161Y":Add the "@Override" annotation above this method signature(óÚ°ùÿÿÿÿ8™ÀŞ÷Ç1
+java:S1161[":Add the "@Override" annotation above this method signature(óÚ°ùÿÿÿÿ8”ô»ûÇ1
 L
-java:S1172f"*Remove this unused method parameter "evt".(§ñÜşûÿÿÿÿ8›ÀŞ÷Ç1
+java:S1172h"*Remove this unused method parameter "evt".(§ñÜşûÿÿÿÿ8—ô»ûÇ1
 L
-java:S1172j"*Remove this unused method parameter "evt".(©¼úşüÿÿÿÿ8›ÀŞ÷Ç1
+java:S1172l"*Remove this unused method parameter "evt".(©¼úşüÿÿÿÿ8˜ô»ûÇ1
 S
-java:S2696o"6Make the enclosing method "static" or remove this set.(ÜÖƒ·8ÀŞ÷Ç1
+java:S2696s"6Make the enclosing method "static" or remove this set.(ÜÖƒ·8œô»ûÇ1
 L
-java:S1172x"*Remove this unused method parameter "evt".(½êéşıÿÿÿÿ8ŸÀŞ÷Ç1
+java:S1172|"*Remove this unused method parameter "evt".(½êéşıÿÿÿÿ8ô»ûÇ1
+H
+java:S1172ƒ"*Remove this unused method parameter "evt".(Œ¹×Å8ô»ûÇ1
 G
-java:S1172"*Remove this unused method parameter "evt".(Œ¹×Å8ŸÀŞ÷Ç1
-G
-java:S1172ƒ"*Remove this unused method parameter "evt".(å§¸+8 ÀŞ÷Ç1
+java:S1172‡"*Remove this unused method parameter "evt".(å§¸+8ô»ûÇ1

@@ -3,6 +3,7 @@ package aluno.ifpb.edu.br.gerenciadordetarefas.view;
 import aluno.ifpb.edu.br.gerenciadordetarefas.controller.TarefaController;
 import aluno.ifpb.edu.br.gerenciadordetarefas.controller.TarefaRepository;
 import aluno.ifpb.edu.br.gerenciadordetarefas.model.Tarefa;
+import aluno.ifpb.edu.br.gerenciadordetarefas.model.Usuario;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -14,6 +15,7 @@ import static aluno.ifpb.edu.br.gerenciadordetarefas.view.TelaLoginView.usuarioL
 public class TelaEditarView extends javax.swing.JFrame {
     private final TelaPrincipalView telaPrincipal;
     private final Tarefa tarefaParaEditar;
+    private Usuario usuarioCadastrado;
     private final TarefaRepository tarefaPersistence;
 
     private TarefaController tarefaController;
@@ -23,6 +25,7 @@ public class TelaEditarView extends javax.swing.JFrame {
         initComponents();
         this.telaPrincipal = telaPrincipal;
         this.tarefaParaEditar = tarefaParaEditar;
+        this.usuarioCadastrado = new Usuario("", "");
         this.tarefaPersistence = new TarefaRepository();
         this.tarefaController = new TarefaController();
         preencherCampos();
@@ -184,27 +187,38 @@ public class TelaEditarView extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         try {
-            Tarefa tarefaEditada = criarTarefaEditada();
+            if (camposPreenchidos()) {
+                Tarefa tarefaEditada = criarTarefaEditada();
 
-            if (validarOpcoesSelecionadas()) {
-                if (tarefaController.editarTarefa(tarefaParaEditar, tarefaEditada)) {
-                    JOptionPane.showMessageDialog(this, "Tarefa editada com sucesso!");
-                    dispose();
-                    atualizarListaETelaPrincipal();
+                if (validarOpcoesSelecionadas()) {
+                    if (tarefaController.editarTarefa(tarefaParaEditar, tarefaEditada)) {
+                        JOptionPane.showMessageDialog(this, "Tarefa editada com sucesso!");
+                        dispose();
+                        atualizarListaETelaPrincipal();
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
+                    }
                 } else {
-                    JOptionPane.showMessageDialog(this, "Erro ao editar a tarefa. Verifique os dados e tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Por favor, selecione uma opção para Status e Importância.", "Erro", JOptionPane.ERROR_MESSAGE);
                 }
             } else {
-                JOptionPane.showMessageDialog(this, "Por favor, selecione uma opção para Status e Importância.", "Erro", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Por favor, preencha todos os campos obrigatórios.", "Erro", JOptionPane.ERROR_MESSAGE);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
+    private boolean camposPreenchidos() {
+        return !jTextFieldTitulo.getText().isEmpty() &&
+                !jTextArea1.getText().isEmpty() &&
+                !jFormattedTextFieldData.getText().isEmpty();
+    }
+
+
     private Tarefa criarTarefaEditada() {
         return new Tarefa(
-                tarefaParaEditar.getUsuario(),
+                usuarioCadastrado.getNomeUsuario(),
                 jTextFieldTitulo.getText(),
                 jTextArea1.getText(),
                 jFormattedTextFieldData.getText(),

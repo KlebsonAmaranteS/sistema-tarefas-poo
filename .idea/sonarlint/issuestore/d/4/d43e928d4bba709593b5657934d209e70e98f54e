@@ -1,82 +1,87 @@
 
-g	java:S112p"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8É˜Ä÷Ç1
-g	java:S112{"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8É˜Ä÷Ç1
-h	java:S112…"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8É˜Ä÷Ç1
-h	java:S112š"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8É˜Ä÷Ç1
-h	java:S112˜"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8É˜Ä÷Ç1
+g	java:S112q"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Øº²ûÇ1
+g	java:S112|"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Øº²ûÇ1
+h	java:S112†"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Øº²ûÇ1
+h	java:S112›"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Øº²ûÇ1
+h	java:S112¦"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Øº²ûÇ1
+h	java:S112§"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8àòıÇ1
 l
-java:S1192Ù"NDefine a constant instead of duplicating this literal "ConfirmaÃ§Ã£o" 3 times.(¸á ş8Î˜Ä÷Ç1
+java:S1192à"NDefine a constant instead of duplicating this literal "ConfirmaÃ§Ã£o" 3 times.(¸á ş8áº²ûÇ1
 J
-java:S1604F"(Make this anonymous inner class a lambda(Æ¸ÁÉÿÿÿÿÿ8Ï˜Ä÷Ç1
+java:S1604G"(Make this anonymous inner class a lambda(Æ¸ÁÉÿÿÿÿÿ8âº²ûÇ1
 J
-java:S1604]"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ8Ï˜Ä÷Ç1
+java:S1604^"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ8ãº²ûÇ1
 E
-java:S1604d"(Make this anonymous inner class a lambda(áÁá8Ï˜Ä÷Ç1
+java:S1604e"(Make this anonymous inner class a lambda(áÁá8ãº²ûÇ1
 E
-java:S1604k"(Make this anonymous inner class a lambda(›®Êß8Ï˜Ä÷Ç1
+java:S1604l"(Make this anonymous inner class a lambda(›®Êß8ãº²ûÇ1
 J
-java:S1604v"(Make this anonymous inner class a lambda(şÌ£Şÿÿÿÿÿ8Ï˜Ä÷Ç1
+java:S1604w"(Make this anonymous inner class a lambda(şÌ£Şÿÿÿÿÿ8ãº²ûÇ1
 K
-java:S1604€"(Make this anonymous inner class a lambda(æ‹Êğûÿÿÿÿ8Ï˜Ä÷Ç1
+java:S1604"(Make this anonymous inner class a lambda(æ‹Êğûÿÿÿÿ8ãº²ûÇ1
 F
-java:S1604Š"(Make this anonymous inner class a lambda(ÿóÎ×8Ï˜Ä÷Ç1
+java:S1604‹"(Make this anonymous inner class a lambda(ÿóÎ×8ãº²ûÇ1
 K
-java:S1604•"(Make this anonymous inner class a lambda(ùóŸÜùÿÿÿÿ8Ï˜Ä÷Ç1
+java:S1604–"(Make this anonymous inner class a lambda(ùóŸÜùÿÿÿÿ8ãº²ûÇ1
 F
-java:S1604Ÿ"(Make this anonymous inner class a lambda(ÿóÎ×8Ğ˜Ä÷Ç1
+java:S1604 "(Make this anonymous inner class a lambda(ÿóÎ×8ìòıÇ1
 ¤
-java:S1186»"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ù‚Ÿıÿÿÿÿ8ı˜Ä÷Ç1
+java:S1186Ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ù‚Ÿıÿÿÿÿ8–»²ûÇ1
 u
-java:S1450â"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶8ÿ˜Ä÷Ç1
+java:S1450ñ"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶8š»²ûÇ1
 u
-java:S1450ã"WRemove the "jButton2" field and declare it as a local variable in the relevant methods.(¤½ÃÜ8ÿ˜Ä÷Ç1
+java:S1450ò"WRemove the "jButton2" field and declare it as a local variable in the relevant methods.(¤½ÃÜ8›»²ûÇ1
 z
-java:S1450í"\Remove the "jButtonBuscar" field and declare it as a local variable in the relevant methods.(œ£Ö8€™Ä÷Ç1
+java:S1450ü"\Remove the "jButtonBuscar" field and declare it as a local variable in the relevant methods.(œ£Ö8»²ûÇ1
 „
-java:S1450ä"aRemove the "jButtonCriarTarefa" field and declare it as a local variable in the relevant methods.(Õ•®‡ıÿÿÿÿ8€™Ä÷Ç1
+java:S1450ó"aRemove the "jButtonCriarTarefa" field and declare it as a local variable in the relevant methods.(Õ•®‡ıÿÿÿÿ8»²ûÇ1
 €
-java:S1450å"bRemove the "jButtonEditarTarefa" field and declare it as a local variable in the relevant methods.(¾’Ü¬8€™Ä÷Ç1
+java:S1450ô"bRemove the "jButtonEditarTarefa" field and declare it as a local variable in the relevant methods.(¾’Ü¬8»²ûÇ1
 
-java:S1450æ"cRemove the "jButtonRemoverTarefa" field and declare it as a local variable in the relevant methods.(´øŸ¹8€™Ä÷Ç1
+java:S1450õ"cRemove the "jButtonRemoverTarefa" field and declare it as a local variable in the relevant methods.(´øŸ¹8»²ûÇ1
 ‡
-java:S1450ç"dRemove the "jButtonRemoverTarefa1" field and declare it as a local variable in the relevant methods.(ÜÇÔÁÿÿÿÿÿ8™Ä÷Ç1
+java:S1450ö"dRemove the "jButtonRemoverTarefa1" field and declare it as a local variable in the relevant methods.(ÜÇÔÁÿÿÿÿÿ8»²ûÇ1
 y
-java:S1450è"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ8™Ä÷Ç1
+java:S1450÷"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ8»²ûÇ1
 ~
-java:S1450ê"[Remove the "jScrollPane2" field and declare it as a local variable in the relevant methods.(ŠÌ«·şÿÿÿÿ8™Ä÷Ç1
+java:S1450ù"[Remove the "jScrollPane2" field and declare it as a local variable in the relevant methods.(ŠÌ«·şÿÿÿÿ8Ÿ»²ûÇ1
 O
-java:S1948"2Make "tarefaController" transient or serializable.(‡ï’î8‚™Ä÷Ç1
+java:S1948"2Make "tarefaController" transient or serializable.(‡ï’î8Ÿ»²ûÇ1
 O
-java:S1948"2Make "tarefaRepository" transient or serializable.(çÆ‰8‚™Ä÷Ç1
+java:S1948"2Make "tarefaRepository" transient or serializable.(çÆ‰8Ÿ»²ûÇ1
 F
-java:S1948")Make "tarefas" transient or serializable.(åŸ’¨8‚™Ä÷Ç1
+java:S1948")Make "tarefas" transient or serializable.(åŸ’¨8 »²ûÇ1
 ]
-java:S1117(";Rename "tarefas" which hides the field declared at line 18.(ìÂºûÿÿÿÿ8ˆ™Ä÷Ç1
+java:S1117)";Rename "tarefas" which hides the field declared at line 19.(ìÂºûÿÿÿÿ8¨»²ûÇ1
 K
-java:S1948P")Make "strings" transient or serializable.(¼äœ÷ùÿÿÿÿ8™Ä÷Ç1
+java:S1948Q")Make "strings" transient or serializable.(¼äœ÷ùÿÿÿÿ8¯»²ûÇ1
 M
-java:S1172Ø"*Remove this unused method parameter "evt".(‘ òôøÿÿÿÿ8™Ä÷Ç1
+java:S1172ß"*Remove this unused method parameter "evt".(‘ òôøÿÿÿÿ8¿»²ûÇ1
 H
-java:S1172à"*Remove this unused method parameter "evt".(ëÑî¾8Ÿ™Ä÷Ç1
+java:S1172è"*Remove this unused method parameter "evt".(ëÑî¾8ê€æüÇ1
+J
+java:S1602í",Remove useless curly braces around statement(Ö¾èó8ïô§ıÇ1
+J
+java:S1602ı",Remove useless curly braces around statement(Ö¾èó8ñô§ıÇ1
 Š
-java:S1130ö"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(òÁ—Î8 ™Ä÷Ç1
+java:S1130…"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(òÁ—Î8Â»²ûÇ1
 H
-java:S1172ö"*Remove this unused method parameter "evt".(òÁ—Î8¡™Ä÷Ç1
+java:S1172…"*Remove this unused method parameter "evt".(òÁ—Î8Í¨ëüÇ1
 Š
-java:S1130Ÿ"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ÿá¾ˆ8¤™Ä÷Ç1
+java:S1130®"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ÿá¾ˆ8Í»²ûÇ1
 H
-java:S1172Ÿ"*Remove this unused method parameter "evt".(ÿá¾ˆ8¥™Ä÷Ç1
+java:S1172®"*Remove this unused method parameter "evt".(ÿá¾ˆ8Õ‹˜ıÇ1
 
-java:S1130»"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(Ù‚Ÿıÿÿÿÿ8§™Ä÷Ç1
+java:S1130Ê"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(Ù‚Ÿıÿÿÿÿ8×»²ûÇ1
 M
-java:S1172»"*Remove this unused method parameter "evt".(Ù‚Ÿıÿÿÿÿ8§™Ä÷Ç1
+java:S1172Ê"*Remove this unused method parameter "evt".(Ù‚Ÿıÿÿÿÿ8”Ó ıÇ1
 M
-java:S1172À"*Remove this unused method parameter "evt".(ğƒøÿÿÿÿ8§™Ä÷Ç1
+java:S1172Ï"*Remove this unused method parameter "evt".(ğƒøÿÿÿÿ8šÍ¥ıÇ1
 Š
-java:S1130Ç"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¯—Öò8©™Ä÷Ç1
+java:S1130Ö"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¯—Öò8Ş»²ûÇ1
 H
-java:S1172Ç"*Remove this unused method parameter "evt".(¯—Öò8©™Ä÷Ç1
+java:S1172Ö"*Remove this unused method parameter "evt".(¯—Öò8Šõ§ıÇ1
 ^
-java:S1117É";Rename "tarefas" which hides the field declared at line 18.(ìÂºûÿÿÿÿ8ª™Ä÷Ç1
+java:S1117Ø";Rename "tarefas" which hides the field declared at line 19.(ìÂºûÿÿÿÿ8â»²ûÇ1
 Q
-java:S1068"4Remove this unused "tarefaRepository" private field.(çÆ‰8¬™Ä÷Ç1
+java:S1068"4Remove this unused "tarefaRepository" private field.(çÆ‰8å»²ûÇ1

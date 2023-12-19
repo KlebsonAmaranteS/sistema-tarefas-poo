@@ -32,4 +32,4 @@ O objetivo era desenvolver um sistema de gerenciamento de tarefas para a discipl
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT.
- 
+
