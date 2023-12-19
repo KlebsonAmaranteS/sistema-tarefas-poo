@@ -137,7 +137,13 @@ public class TelaPrincipalView extends javax.swing.JFrame {
 
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                SwingUtilities.invokeLater(() -> {
+                    try {
+                        buscarTarefa();
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                });
             }
         });
 
@@ -221,25 +227,34 @@ public class TelaPrincipalView extends javax.swing.JFrame {
         }
     }
 
-    private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {
-        try {
-            String termoBusca = jTextFieldBuscarTarefa.getText().trim();
 
-            if (termoBusca.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Digite um termo de busca", "Busca de Tarefas", JOptionPane.INFORMATION_MESSAGE);
-            } else {
-                List<Tarefa> tarefasFiltradas = tarefaController.buscarTarefas(usuarioLogado, termoBusca);
+    private void buscarTarefa() {
+        String termoBusca = jTextFieldBuscarTarefa.getText();
 
-                if (tarefasFiltradas.isEmpty()) {
-                    String mensagem = "Nenhuma tarefa encontrada para o termo: " + termoBusca;
-                    JOptionPane.showMessageDialog(this, mensagem, "Busca de Tarefas", JOptionPane.INFORMATION_MESSAGE);
-                } else {
-                    atualizarListaTarefas(tarefasFiltradas);
+        if (termoBusca != null && !termoBusca.isEmpty()) {
+            List<Tarefa> tarefas = TarefaRepository.carregarTarefas(usuarioLogado);
+
+            DefaultListModel<Tarefa> model = new DefaultListModel<>();
+            boolean encontrouTarefas = false;
+
+            for (Tarefa tarefa : tarefas) {
+                if (tarefa.getDescricao().contains(termoBusca) || tarefa.getTitulo().contains(termoBusca)) {
+                    model.addElement(tarefa);
+                    encontrouTarefas = true;
                 }
             }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Erro ao buscar tarefas: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+
+            jList1.setModel(model);
+
+            if (!encontrouTarefas) {
+                JOptionPane.showMessageDialog(frame, "Nenhuma tarefa encontrada com o termo: " + termoBusca);
+            }
+        } else {
+            JOptionPane.showMessageDialog(frame, "Por favor, digite um termo de busca.");
         }
+    }
+    private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {
+
     }
 
 
@@ -364,4 +379,3 @@ public class TelaPrincipalView extends javax.swing.JFrame {
 
     private javax.swing.JButton jButtonBuscar;
 }
-
